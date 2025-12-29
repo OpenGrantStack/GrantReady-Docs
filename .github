@@ -1,0 +1,3723 @@
+FILE TREE
+
+```
+grantready-docs/
+├── README.md
+├── LICENSE
+├── CODE_OF_CONDUCT.md
+├── CONTRIBUTING.md
+├── docs/
+│   ├── compliance-overview.md
+│   ├── audit-readiness.md
+│   └── data-retention.md
+├── templates/
+│   ├── grant-application-template.md
+│   ├── reporting-template.md
+│   └── compliance-attestation.md
+└── schemas/
+    ├── grant.json
+    └── disbursement.json
+```
+
+---
+
+FILE CONTENTS
+
+README.md
+
+```markdown
+# GrantReady Documentation Repository
+
+A public repository of grant documentation templates, compliance frameworks, and audit-ready schemas for mobile and cloud-based grant management systems.
+
+## Purpose
+
+This repository provides standardized documentation resources for organizations managing grants, with particular focus on compliance with US federal, state, and NGO requirements. The templates and schemas are designed to be mobile-first and cloud-agnostic, ensuring accessibility across different technical environments.
+
+## Primary Audience
+
+- **Government Agencies**: Federal, state, and local grant-making entities
+- **Nonprofit Organizations**: Recipients and administrators of grant funds
+- **Auditors & Compliance Officers**: Professionals verifying grant compliance
+- **System Integrators**: Developers implementing grant management solutions
+
+## Repository Structure
+
+`
+
+grantready-docs/
+├──docs/              # Compliance and operational documentation
+├──templates/         # Ready-to-use document templates
+└──schemas/          # JSON schemas for data interoperability
+
+`
+
+## Key Resources
+
+### Documentation
+- **Compliance Overview**: Framework alignment with regulatory requirements
+- **Audit Readiness**: Preparation guidelines for financial and program audits
+- **Data Retention**: Policies for records management and archival
+
+### Templates
+- **Grant Application**: Standardized application format
+- **Reporting Template**: Periodic performance and financial reporting
+- **Compliance Attestation**: Certification of regulatory adherence
+
+### Schemas
+- **Grant Schema**: Structured definition of grant metadata and terms
+- **Disbursement Schema**: Payment and fund distribution data structure
+
+## Integration with GrantReady Ecosystem
+
+This repository complements the GrantReady platform by providing:
+
+1. **Standardized Templates**: Consistent documentation across all grant cycles
+2. **Interoperability Schemas**: Machine-readable data definitions for system integration
+3. **Compliance Frameworks**: Regulatory alignment for diverse funding sources
+4. **Audit Trails**: Documentation supporting transparent fund management
+
+## Usage Guidelines
+
+1. Select appropriate templates for your grant type and funding source
+2. Customize templates to reflect specific program requirements
+3. Reference compliance documentation during grant design
+4. Use schemas for system integration and data validation
+5. Maintain version control of all grant documentation
+
+## License
+
+This repository is licensed under the Apache License 2.0. See [LICENSE](LICENSE) for complete terms.
+
+## Contributing
+
+We welcome contributions from government agencies, nonprofits, and compliance professionals. Please review [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+
+## Code of Conduct
+
+This project adheres to a professional code of conduct. See [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) for details.
+```
+
+
+
+
+
+LICENSE
+
+```text
+                                 Apache License
+                           Version 2.0, January 2004
+                        http://www.apache.org/licenses/
+
+   TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+
+   1. Definitions.
+
+      "License" shall mean the terms and conditions for use, reproduction,
+      and distribution as defined by Sections 1 through 9 of this document.
+
+      "Licensor" shall mean the copyright owner or entity authorized by
+      the copyright owner that is granting the License.
+
+      "Legal Entity" shall mean the union of the acting entity and all
+      other entities that control, are controlled by, or are under common
+      control with that entity. For the purposes of this definition,
+      "control" means (i) the power, direct or indirect, to cause the
+      direction or management of such entity, whether by contract or
+      otherwise, or (ii) ownership of fifty percent (50%) or more of the
+      outstanding shares, or (iii) beneficial ownership of such entity.
+
+      "You" (or "Your") shall mean an individual or Legal Entity
+      exercising permissions granted by this License.
+
+      "Source" form shall mean the preferred form for making modifications,
+      including but not limited to software source code, documentation
+      source, and configuration files.
+
+      "Object" form shall mean any form resulting from mechanical
+      transformation or translation of a Source form, including but
+      not limited to compiled object code, generated documentation,
+      and conversions to other media types.
+
+      "Work" shall mean the work of authorship, whether in Source or
+      Object form, made available under the License, as indicated by a
+      copyright notice that is included in or attached to the work
+      (an example is provided in the Appendix below).
+
+      "Derivative Works" shall mean any work, whether in Source or Object
+      form, that is based on (or derived from) the Work and for which the
+      editorial revisions, annotations, elaborations, or other modifications
+      represent, as a whole, an original work of authorship. For the purposes
+      of this License, Derivative Works shall not include works that remain
+      separable from, or merely link (or bind by name) to the interfaces of,
+      the Work and Derivative Works thereof.
+
+      "Contribution" shall mean any work of authorship, including
+      the original version of the Work and any modifications or additions
+      to that Work or Derivative Works thereof, that is intentionally
+      submitted to Licensor for inclusion in the Work by the copyright owner
+      or by an individual or Legal Entity authorized to submit on behalf of
+      the copyright owner. For the purposes of this definition, "submitted"
+      means any form of electronic, verbal, or written communication sent
+      to the Licensor or its representatives, including but not limited to
+      communication on electronic mailing lists, source code control systems,
+      and issue tracking systems that are managed by, or on behalf of, the
+      Licensor for the purpose of discussing and improving the Work, but
+      excluding communication that is conspicuously marked or otherwise
+      designated in writing by the copyright owner as "Not a Contribution."
+
+      "Contributor" shall mean Licensor and any individual or Legal Entity
+      on behalf of whom a Contribution has been received by Licensor and
+      subsequently incorporated within the Work.
+
+   2. Grant of Copyright License. Subject to the terms and conditions of
+      this License, each Contributor hereby grants to You a perpetual,
+      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+      copyright license to reproduce, prepare Derivative Works of,
+      publicly display, publicly perform, sublicense, and distribute the
+      Work and such Derivative Works in Source or Object form.
+
+   3. Grant of Patent License. Subject to the terms and conditions of
+      this License, each Contributor hereby grants to You a perpetual,
+      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+      (except as stated in this section) patent license to make, have made,
+      use, offer to sell, sell, import, and otherwise transfer the Work,
+      where such license applies only to those patent claims licensable
+      by such Contributor that are necessarily infringed by their
+      Contribution(s) alone or by combination of their Contribution(s)
+      with the Work to which such Contribution(s) was submitted. If You
+      institute patent litigation against any entity (including a
+      cross-claim or counterclaim in a lawsuit) alleging that the Work
+      or a Contribution incorporated within the Work constitutes direct
+      or contributory patent infringement, then any patent licenses
+      granted to You under this License for that Work shall terminate
+      as of the date such litigation is filed.
+
+   4. Redistribution. You may reproduce and distribute copies of the
+      Work or Derivative Works thereof in any medium, with or without
+      modifications, and in Source or Object form, provided that You
+      meet the following conditions:
+
+      (a) You must give any other recipients of the Work or
+          Derivative Works a copy of this License; and
+
+      (b) You must cause any modified files to carry prominent notices
+          stating that You changed the files; and
+
+      (c) You must retain, in the Source form of any Derivative Works
+          that You distribute, all copyright, patent, trademark, and
+          attribution notices from the Source form of the Work,
+          excluding those notices that do not pertain to any part of
+          the Derivative Works; and
+
+      (d) If the Work includes a "NOTICE" text file as part of its
+          distribution, then any Derivative Works that You distribute must
+          include a readable copy of the attribution notices contained
+          within such NOTICE file, excluding those notices that do not
+          pertain to any part of the Derivative Works, in at least one
+          of the following places: within a NOTICE text file distributed
+          as part of the Derivative Works; within the Source form or
+          documentation, if provided along with the Derivative Works; or,
+          within a display generated by the Derivative Works, if and
+          wherever such third-party notices normally appear. The contents
+          of the NOTICE file are for informational purposes only and
+          do not modify the License. You may add Your own attribution
+          notices within Derivative Works that You distribute, alongside
+          or as an addendum to the NOTICE text from the Work, provided
+          that such additional attribution notices cannot be construed
+          as modifying the License.
+
+      You may add Your own copyright statement to Your modifications and
+      may provide additional or different license terms and conditions
+      for use, reproduction, or distribution of Your modifications, or
+      for any such Derivative Works as a whole, provided Your use,
+      reproduction, and distribution of the Work otherwise complies with
+      the conditions stated in this License.
+
+   5. Submission of Contributions. Unless You explicitly state otherwise,
+      any Contribution intentionally submitted for inclusion in the Work
+      by You to the Licensor shall be under the terms and conditions of
+      this License, without any additional terms or conditions.
+      Notwithstanding the above, nothing herein shall supersede or modify
+      the terms of any separate license agreement you may have executed
+      with Licensor regarding such Contributions.
+
+   6. Trademarks. This License does not grant permission to use the trade
+      names, trademarks, service marks, or product names of the Licensor,
+      except as required for reasonable and customary use in describing the
+      origin of the Work and reproducing the content of the NOTICE file.
+
+   7. Disclaimer of Warranty. Unless required by applicable law or
+      agreed to in writing, Licensor provides the Work (and each
+      Contributor provides its Contributions) on an "AS IS" BASIS,
+      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+      implied, including, without limitation, any warranties or conditions
+      of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A
+      PARTICULAR PURPOSE. You are solely responsible for determining the
+      appropriateness of using or redistributing the Work and assume any
+      risks associated with Your exercise of permissions under this License.
+
+   8. Limitation of Liability. In no event and under no legal theory,
+      whether in tort (including negligence), contract, or otherwise,
+      unless required by applicable law (such as deliberate and grossly
+      negligent acts) or agreed to in writing, shall any Contributor be
+      liable to You for damages, including any direct, indirect, special,
+      incidental, or consequential damages of any character arising as a
+      result of this License or out of the use or inability to use the
+      Work (including but not limited to damages for loss of goodwill,
+      work stoppage, computer failure or malfunction, or any and all
+      other commercial damages or losses), even if such Contributor
+      has been advised of the possibility of such damages.
+
+   9. Accepting Warranty or Additional Liability. While redistributing
+      the Work or Derivative Works thereof, You may choose to offer,
+      and charge a fee for, acceptance of support, warranty, indemnity,
+      or other liability obligations and/or rights consistent with this
+      License. However, in accepting such obligations, You may act only
+      on Your own behalf and on Your sole responsibility, not on behalf
+      of any other Contributor, and only if You agree to indemnify,
+      defend, and hold each Contributor harmless for any liability
+      incurred by, or claims asserted against, such Contributor by reason
+      of your accepting any such warranty or additional liability.
+
+   END OF TERMS AND CONDITIONS
+
+   APPENDIX: How to apply the Apache License to your work.
+
+      To apply the Apache License to your work, attach the following
+      boilerplate notice, with the fields enclosed by brackets "[]"
+      replaced with your own identifying information. (Don't include
+      the brackets!)  The text should be enclosed in the appropriate
+      comment syntax for the file format. We also recommend that a
+      file or class name and description of purpose be included on the
+      same "printed page" as the copyright notice for easier
+      identification within third-party archives.
+
+   Copyright [2026][Richard Kindler]
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+```
+
+
+
+
+
+CODE_OF_CONDUCT.md
+
+```markdown
+# Contributor Covenant Code of Conduct
+
+## Our Pledge
+
+We as members, contributors, and leaders pledge to make participation in our
+community a harassment-free experience for everyone, regardless of age, body
+size, visible or invisible disability, ethnicity, sex characteristics, gender
+identity and expression, level of experience, education, socio-economic status,
+nationality, personal appearance, race, religion, or sexual identity and orientation.
+
+We pledge to act and interact in ways that contribute to an open, welcoming,
+diverse, inclusive, and healthy community.
+
+## Our Standards
+
+Examples of behavior that contributes to a positive environment for our
+community include:
+
+* Demonstrating empathy and kindness toward other people
+* Being respectful of differing opinions, viewpoints, and experiences
+* Giving and gracefully accepting constructive feedback
+* Accepting responsibility and apologizing to those affected by our mistakes,
+  and learning from the experience
+* Focusing on what is best not just for us as individuals, but for the overall
+  community
+
+Examples of unacceptable behavior include:
+
+* The use of sexualized language or imagery, and sexual attention or advances of
+  any kind
+* Trolling, insulting or derogatory comments, and personal or political attacks
+* Public or private harassment
+* Publishing others' private information, such as a physical or email address,
+  without their explicit permission
+* Other conduct which could reasonably be considered inappropriate in a
+  professional setting
+
+## Enforcement Responsibilities
+
+Community leaders are responsible for clarifying and enforcing our standards of
+acceptable behavior and will take appropriate and fair corrective action in
+response to any behavior that they deem inappropriate, threatening, offensive,
+or harmful.
+
+Community leaders have the right and responsibility to remove, edit, or reject
+comments, commits, code, wiki edits, issues, and other contributions that are
+not aligned to this Code of Conduct, and will communicate reasons for moderation
+decisions when appropriate.
+
+## Scope
+
+This Code of Conduct applies within all community spaces, and also applies when
+an individual is officially representing the community in public spaces.
+Examples of representing our community include using an official e-mail address,
+posting via an official social media account, or acting as an appointed
+representative at an online or offline event.
+
+## Enforcement
+
+Instances of abusive, harassing, or otherwise unacceptable behavior may be
+reported to the community leaders responsible for enforcement at
+conduct@grantready.org.
+All complaints will be reviewed and investigated promptly and fairly.
+
+All community leaders are obligated to respect the privacy and security of the
+reporter of any incident.
+
+## Enforcement Guidelines
+
+Community leaders will follow these Community Impact Guidelines in determining
+the consequences for any action they deem in violation of this Code of Conduct:
+
+### 1. Correction
+**Community Impact**: Use of inappropriate language or other behavior deemed
+unprofessional or unwelcome in the community.
+
+**Consequence**: A private, written warning from community leaders, providing
+clarity around the nature of the violation and an explanation of why the
+behavior was inappropriate. A public apology may be requested.
+
+### 2. Warning
+**Community Impact**: A violation through a single incident or series of
+actions.
+
+**Consequence**: A warning with consequences for continued behavior. No
+interaction with the people involved, including unsolicited interaction with
+those enforcing the Code of Conduct, for a specified period of time. This
+includes avoiding interactions in community spaces as well as external channels
+like social media. Violating these terms may lead to a temporary or permanent
+ban.
+
+### 3. Temporary Ban
+**Community Impact**: A serious violation of community standards, including
+sustained inappropriate behavior.
+
+**Consequence**: A temporary ban from any sort of interaction or public
+communication with the community for a specified period of time. No public or
+private interaction with the people involved, including unsolicited interaction
+with those enforcing the Code of Conduct, is allowed during this period.
+Violating these terms may lead to a permanent ban.
+
+### 4. Permanent Ban
+**Community Impact**: Demonstrating a pattern of violation of community
+standards, including sustained inappropriate behavior, harassment of an
+individual, or aggression toward or disparagement of classes of individuals.
+
+**Consequence**: A permanent ban from any sort of public interaction within the
+community.
+
+## Attribution
+
+This Code of Conduct is adapted from the [Contributor Covenant][homepage],
+version 2.1, available at
+https://www.contributor-covenant.org/version/2/1/code_of_conduct.html.
+
+Community Impact Guidelines were inspired by
+[Mozilla's code of conduct enforcement ladder](https://github.com/mozilla/diversity).
+
+[homepage]: https://www.contributor-covenant.org
+
+For answers to common questions about this code of conduct, see the FAQ at
+https://www.contributor-covenant.org/faq. Translations are available at
+https://www.contributor-covenant.org/translations.
+```
+
+CONTRIBUTING.md
+
+```markdown
+# Contributing to GrantReady Documentation
+
+Thank you for your interest in contributing to the GrantReady Documentation repository. This document provides guidelines and processes for contributing templates, schemas, and documentation.
+
+## Purpose of Contributions
+
+We welcome contributions that:
+
+1. Enhance compliance with government regulations
+2. Improve accessibility for diverse user groups
+3. Add templates for new grant types or jurisdictions
+4. Clarify audit requirements and processes
+5. Improve schema interoperability
+
+## Contribution Types
+
+### Documentation
+- Compliance guidelines
+- Audit preparation materials
+- Best practices for grant management
+- Regulatory updates
+
+### Templates
+- Grant application forms
+- Reporting templates
+- Compliance certification documents
+- Audit worksheets
+
+### Schemas
+- JSON schemas for grant data
+- Validation rules
+- Data interchange formats
+
+## Contribution Process
+
+### 1. Preliminary Review
+Before starting significant work, please:
+- Review existing issues to avoid duplication
+- Consider opening a discussion issue for feedback
+- Ensure your contribution aligns with repository goals
+
+### 2. Creating Contributions
+
+#### For Documentation:
+- Use clear, professional language
+- Cite regulatory sources where applicable
+- Structure content with appropriate headings
+- Include practical examples when helpful
+
+#### For Templates:
+- Maintain consistent formatting
+- Include all necessary legal disclaimers
+- Ensure mobile-friendly design
+- Provide clear instructions for use
+
+#### For Schemas:
+- Follow JSON Schema specification
+- Include comprehensive validation
+- Document all fields and requirements
+- Test with sample data
+
+### 3. Submission Requirements
+
+All submissions must include:
+
+1. **Complete files** with all necessary content
+2. **Descriptive commit messages** explaining changes
+3. **Reference to regulations** where applicable
+4. **Testing information** for schemas
+5. **Version information** for templates
+
+### 4. Review Process
+
+1. **Initial Review**: Within 7 business days
+2. **Feedback Cycle**: Iterative improvements as needed
+3. **Final Approval**: By repository maintainers
+4. **Merge & Documentation**: Integration and attribution
+
+## Technical Requirements
+
+### File Structure
+- Place documentation in `/docs/`
+- Place templates in `/templates/`
+- Place schemas in `/schemas/`
+- Use kebab-case for filenames (e.g., `grant-application-template.md`)
+
+### Formatting Standards
+
+#### Markdown Documentation:
+- Use ATX-style headers (#, ##, ###)
+- Wrap lines at 80 characters for prose
+- Use tables for comparative information
+- Include back to top links for long documents
+
+#### JSON Schemas:
+- Include `$schema` declaration
+- Provide comprehensive `description` fields
+- Use consistent property ordering
+- Include examples for complex structures
+
+### Versioning
+- Templates should include version numbers in metadata
+- Schemas should follow semantic versioning
+- Breaking changes require major version increments
+
+## Legal Considerations
+
+### Regulatory Compliance
+- Verify alignment with current regulations
+- Note jurisdiction-specific requirements
+- Include necessary legal disclaimers
+- Respect data privacy regulations
+
+### Licensing
+- All contributions are licensed under Apache 2.0
+- Contributors retain copyright but grant license
+- Ensure no proprietary information is included
+- Attribute third-party content appropriately
+
+## Quality Standards
+
+### Accuracy
+- Verify all regulatory references
+- Test template functionality
+- Validate schema compliance
+- Review for technical correctness
+
+### Accessibility
+- Ensure mobile-first design
+- Support screen readers
+- Provide alternative text
+- Maintain color contrast standards
+
+### Usability
+- Include clear instructions
+- Provide examples
+- Consider diverse user needs
+- Support multiple languages where possible
+
+## Getting Help
+
+- Open an issue for questions
+- Reference existing examples
+- Consult documentation guidelines
+- Contact maintainers for complex queries
+
+## Recognition
+
+Contributors will be:
+- Listed in release notes
+- Acknowledged in documentation
+- Included in contributor files
+- Recognized for significant contributions
+
+Thank you for supporting transparent and compliant grant management through your contributions.
+```
+
+
+
+
+docs/compliance-overview.md
+
+```markdown
+# Compliance Framework Overview
+
+## Purpose
+
+This document outlines the compliance framework for grant management systems, focusing on alignment with US federal, state, and NGO requirements. The framework is designed to support mobile-first, cloud-agnostic implementations while maintaining rigorous compliance standards.
+
+## Regulatory Landscape
+
+### Federal Requirements
+
+#### 2 CFR Part 200 (Uniform Administrative Requirements)
+- **Financial Management**: Standards for accounting systems
+- **Procurement**: Competitive bidding and documentation
+- **Property Management**: Equipment tracking and disposition
+- **Program Income**: Treatment of earned revenue
+
+#### OMB Circulars
+- **A-133**: Audit requirements for federal awards
+- **A-110**: Administrative requirements for grants
+- **A-102**: Common rule for state and local governments
+
+#### Specific Agency Requirements
+- **NIH**: Public Health Service policies
+- **NSF**: Research grant administration
+- **DOE**: Energy program compliance
+- **DOL**: Workforce development standards
+
+### State-Level Requirements
+
+#### Common Elements
+- **Single Audit Compliance**: State-specific extensions of federal requirements
+- **Reporting Deadlines**: Varying by state and program
+- **Documentation Standards**: State-prescribed formats
+- **Monitoring Requirements**: Site visit and desk review protocols
+
+#### Notable Variations
+- **California**: Additional fair labor standards
+- **New York**: Enhanced procurement requirements
+- **Texas**: Specific documentation retention rules
+- **Florida**: Unique reporting timelines
+
+### NGO and Foundation Requirements
+
+#### Private Foundation Standards
+- **IRS Regulations**: 501(c)(3) compliance
+- **Programmatic Reporting**: Outcome measurement expectations
+- **Financial Transparency**: Public disclosure requirements
+- **Conflict of Interest**: Board and staff regulations
+
+#### International NGO Standards
+- **OECD DAC**: Development assistance criteria
+- **UN Sustainable Development Goals**: Alignment frameworks
+- **IFI Requirements**: World Bank, regional development banks
+
+## Compliance Pillars
+
+### 1. Financial Management
+
+#### Accounting Systems
+- **Fund Accounting**: Separation by source and restriction
+- **Cost Allocation**: Proper assignment of direct and indirect costs
+- **Timekeeping**: Labor distribution documentation
+- **Cash Management**: Drawdown timing and reconciliation
+
+#### Internal Controls
+- **Segregation of Duties**: Authorization, recording, and custody separation
+- **Approval Hierarchies**: Multi-level approval requirements
+- **Reconciliation Procedures**: Bank, ledger, and grant balance alignment
+- **Documentation Standards**: Complete audit trail maintenance
+
+### 2. Program Management
+
+#### Performance Measurement
+- **Outcome Tracking**: Quantitative and qualitative metrics
+- **Milestone Documentation**: Evidence of progress achievement
+- **Beneficiary Verification**: Participant eligibility confirmation
+- **Geographic Compliance**: Service area restrictions
+
+#### Monitoring and Evaluation
+- **Site Visit Protocols**: Preparation and documentation
+- **Desk Review Procedures**: Document submission and review
+- **Corrective Action Plans**: Deficiency resolution tracking
+- **Continuous Improvement**: Process refinement based on findings
+
+### 3. Administrative Compliance
+
+#### Personnel Management
+- **Position Descriptions**: Role alignment with grant requirements
+- **Time and Effort Reporting**: Federal standard compliance
+- **Fringe Benefit Allocation**: Proper cost assignment
+- **Training Documentation**: Staff competency verification
+
+#### Procurement Standards
+- **Competitive Bidding**: Documentation of selection processes
+- **Vendor Qualifications**: Due diligence and vetting
+- **Contract Administration**: Performance monitoring and payment
+- **Conflict of Interest**: Disclosure and mitigation
+
+## Implementation Framework
+
+### Mobile-First Considerations
+
+#### Accessibility Requirements
+- **Section 508 Compliance**: Federal accessibility standards
+- **WCAG 2.1 AA**: Web Content Accessibility Guidelines
+- **Mobile Optimization**: Responsive design for field use
+- **Offline Capability**: Data capture without continuous connectivity
+
+#### Security Protocols
+- **Data Encryption**: At rest and in transit protection
+- **Authentication**: Multi-factor verification options
+- **Session Management**: Timeout and re-authentication
+- **Device Management**: Lost device protocols
+
+### Cloud-Agnostic Architecture
+
+#### Data Portability
+- **Standard Formats**: JSON, CSV, PDF export capabilities
+- **API Access**: RESTful interfaces for system integration
+- **Backup Procedures**: Regular, verifiable data exports
+- **Migration Paths**: Clear procedures for platform changes
+
+#### Compliance Documentation
+- **Configuration Management**: Version-controlled settings
+- **Change Logs**: Auditable modification records
+- **Access Reports**: User activity monitoring
+- **System Documentation**: Architecture and operation guides
+
+## Compliance Verification
+
+### Self-Assessment Tools
+- **Checklists**: Regulatory requirement verification
+- **Questionnaires**: Compliance status evaluation
+- **Gap Analysis**: Deficiency identification and prioritization
+- **Action Planning**: Remediation timeline development
+
+### External Validation
+- **Audit Preparation**: Document organization and review
+- **Monitor Visits**: Site preparation and hosting
+- **Regulatory Reviews**: Agency examination support
+- **Accreditation**: Standards body certification
+
+## Maintenance and Updates
+
+### Regulatory Monitoring
+- **Change Tracking**: Legislative and regulatory updates
+- **Impact Analysis**: Requirement change implications
+- **Implementation Planning**: Rollout of new requirements
+- **Training Updates**: Staff education on changes
+
+### Framework Evolution
+- **Annual Review**: Comprehensive framework assessment
+- **Stakeholder Feedback**: User experience incorporation
+- **Best Practices Integration**: Industry standard adoption
+- **Technology Adaptation**: New platform capability utilization
+
+## Resources and References
+
+### Federal Resources
+- [2 CFR Part 200](https://www.ecfr.gov/current/title-2/subtitle-A/chapter-II/part-200)
+- [OMB Guidance](https://www.whitehouse.gov/omb/management/office-federal-financial-management/)
+- [Grants.gov](https://www.grants.gov)
+
+### State Resources
+- State Grant Management Agencies (varies by state)
+- National Association of State Auditors, Comptrollers and Treasurers
+- Council of State Governments
+
+### Professional Organizations
+- National Grants Management Association
+- American Institute of Certified Public Accountants
+- Association of Government Accountants
+
+---
+
+*Last Updated: [Current Date]*
+*Version: 2.1.0*
+*Applicable Regulations: Current through [Last Quarter/Year]*
+```
+
+
+
+
+
+docs/audit-readiness.md
+
+```markdown
+# Audit Readiness Framework
+
+## Purpose
+
+This document provides a comprehensive framework for preparing grant management systems and documentation for financial, programmatic, and compliance audits. The framework supports organizations in maintaining continuous audit readiness through standardized processes and documentation.
+
+## Audit Types
+
+### Financial Audits
+
+#### Federal Single Audit (2 CFR Part 200, Subpart F)
+- **Scope**: Federal award expenditure examination
+- **Threshold**: $750,000+ in federal expenditures
+- **Requirements**: Schedule of Expenditures of Federal Awards (SEFA)
+- **Reporting**: Data Collection Form and reporting package submission
+
+#### Program-Specific Audits
+- **Trigger**: Federal agency request
+- **Focus**: Specific grant program compliance
+- **Timing**: As specified in award terms
+- **Documentation**: Program activity and expenditure verification
+
+#### Internal Financial Audits
+- **Purpose**: Organizational control verification
+- **Frequency**: Annual or biennial
+- **Scope**: Selected programs or locations
+- **Reporting**: Management letter with findings
+
+### Programmatic Audits
+
+#### Performance Audits
+- **Focus**: Outcome achievement and efficiency
+- **Metrics**: Performance indicator verification
+- **Methodology**: Statistical sampling and case review
+- **Reporting**: Effectiveness and improvement recommendations
+
+#### Compliance Audits
+- **Purpose**: Regulatory requirement verification
+- **Scope**: Specific regulation or standard
+- **Documentation**: Policy and procedure alignment
+- **Reporting**: Deficiency identification and correction
+
+### Specialized Audits
+
+#### IT System Audits
+- **Security**: Access controls and data protection
+- **Integrity**: System reliability and accuracy
+- **Availability**: Uptime and disaster recovery
+- **Compliance**: Regulatory requirement adherence
+
+#### Procurement Audits
+- **Process**: Competitive bidding documentation
+- **Vendor Selection**: Qualification and evaluation
+- **Contract Management**: Performance and payment
+- **Conflict of Interest**: Disclosure and mitigation
+
+## Readiness Timeline
+
+### Continuous Preparation (Ongoing)
+
+#### Daily Activities
+- **Transaction Documentation**: Complete supporting documentation
+- **Timekeeping**: Accurate labor distribution recording
+- **Asset Tracking**: Equipment use and location updates
+- **Communication Logs**: Grant-related correspondence filing
+
+#### Weekly Activities
+- **Reconciliation**: Bank, ledger, and grant balance alignment
+- **File Organization**: Document scanning and indexing
+- **Compliance Monitoring**: Requirement adherence verification
+- **Issue Tracking**: Deficiency identification and logging
+
+### Pre-Audit Preparation (90-180 Days Before)
+
+#### Assessment Phase
+- **Risk Evaluation**: Identification of high-risk areas
+- **Gap Analysis**: Current state vs. requirement comparison
+- **Document Review**: Completeness and accuracy verification
+- **Staff Preparation**: Role assignment and training
+
+#### Remediation Phase
+- **Deficiency Correction**: Issue resolution implementation
+- **Process Improvement**: Control enhancement
+- **Document Completion**: Missing information procurement
+- **Testing**: Control effectiveness verification
+
+### Immediate Preparation (30 Days Before)
+
+#### Final Review
+- **Document Assembly**: Complete audit package compilation
+- **Internal Walkthrough**: Process and control verification
+- **Staff Briefing**: Role clarification and expectation setting
+- **Facility Preparation**: Workspace and resource organization
+
+#### Communication Planning
+- **Auditor Coordination**: Schedule and logistics confirmation
+- **Stakeholder Notification**: Board and leadership updates
+- **Staff Communication**: Role and responsibility reinforcement
+- **Vendor Coordination**: External support arrangement
+
+## Documentation Standards
+
+### Financial Documentation
+
+#### Expenditure Verification
+- **Invoices**: Detailed vendor invoices with descriptions
+- **Receipts**: Proof of payment and delivery
+- **Approvals**: Authorized signature documentation
+- **Allocation**: Cost assignment methodology and calculation
+
+#### Payroll Documentation
+- **Timesheets**: Signed and approved time records
+- **Salary Calculations**: Rate and hour verification
+- **Benefit Allocation**: Methodology and calculation
+- **Certification**: Personnel activity reports
+
+#### Asset Documentation
+- **Inventory Records**: Equipment listing with details
+- **Use Logs**: Purpose and duration documentation
+- **Maintenance Records**: Service and repair documentation
+- **Disposition Records**: Transfer or disposal authorization
+
+### Program Documentation
+
+#### Performance Evidence
+- **Participant Records**: Eligibility verification and enrollment
+- **Service Documentation**: Activity logs and attendance
+- **Outcome Measurement**: Assessment tools and results
+- **Progress Reports**: Milestone achievement verification
+
+#### Compliance Documentation
+- **Policy Manuals**: Current approved versions
+- **Procedure Documentation**: Step-by-step process guides
+- **Training Records**: Staff competency verification
+- **Monitoring Reports**: Internal review findings
+
+### Administrative Documentation
+
+#### Personnel Records
+- **Position Descriptions**: Role requirements and qualifications
+- **Resumes/CVs**: Staff credential verification
+- **Job Announcements**: Recruitment documentation
+- **Evaluation Records**: Performance assessment documentation
+
+#### Procurement Records
+- **Solicitations**: Bid and proposal documentation
+- **Evaluation Criteria**: Vendor selection methodology
+- **Contracts/POs**: Signed agreement documentation
+- **Performance Reviews**: Vendor assessment documentation
+
+## Audit Process Management
+
+### Opening Conference
+
+#### Preparation
+- **Agenda**: Discussion topics and timeline
+- **Participants**: Key staff identification
+- **Materials**: Overview documentation preparation
+- **Facilities**: Meeting space and technology setup
+
+#### Key Discussions
+- **Audit Scope**: Areas and timeframe examination
+- **Methodology**: Testing approach and sampling
+- **Timeline**: Key milestones and deadlines
+- **Communication**: Point of contact and update schedule
+
+### Fieldwork Period
+
+#### Staff Support
+- **Document Retrieval**: Efficient access to requested materials
+- **Interview Coordination**: Staff availability scheduling
+- **Clarification**: Question response and explanation
+- **Issue Escalation**: Problem identification and resolution
+
+#### Progress Monitoring
+- **Daily Check-ins**: Status updates and issue discussion
+- **Document Tracking**: Request log and fulfillment status
+- **Finding Discussion**: Preliminary observation review
+- **Adjustment Implementation**: Process modification as needed
+
+### Exit Conference
+
+#### Preparation
+- **Finding Review**: Preliminary report examination
+- **Response Development**: Management action planning
+- **Correction Verification**: Remediation evidence compilation
+- **Presentation**: Response and explanation preparation
+
+#### Key Discussions
+- **Finding Confirmation**: Accuracy and context verification
+- **Response Presentation**: Management action plan explanation
+- **Timeline Agreement**: Correction implementation schedule
+- **Report Finalization**: Content and format agreement
+
+## Post-Audit Activities
+
+### Report Review and Response
+
+#### Finding Analysis
+- **Root Cause Identification**: Underlying issue determination
+- **Impact Assessment**: Significance and risk evaluation
+- **Corrective Action Planning**: Solution development
+- **Prevention Strategy**: Recurrence avoidance planning
+
+#### Response Development
+- **Formal Response**: Written management response preparation
+- **Action Plan**: Specific, measurable correction steps
+- **Timeline Establishment**: Realistic completion deadlines
+- **Responsibility Assignment**: Staff accountability designation
+
+### Implementation and Monitoring
+
+#### Corrective Action Implementation
+- **Process Modification**: Procedure and control updates
+- **Policy Revision**: Documentation updates and approval
+- **Training Delivery**: Staff education on changes
+- **System Configuration**: Technical control implementation
+
+#### Progress Monitoring
+- **Milestone Tracking**: Action plan step completion
+- **Effectiveness Verification**: Control testing and validation
+- **Documentation Update**: Revised materials filing
+- **Management Reporting**: Progress updates to leadership
+
+### Continuous Improvement
+
+#### Lessons Learned
+- **Process Evaluation**: Effectiveness assessment
+- **Best Practice Identification**: Successful strategy recognition
+- **Gap Analysis**: Remaining vulnerability identification
+- **Improvement Planning**: Enhancement opportunity prioritization
+
+#### System Enhancement
+- **Technology Updates**: System feature implementation
+- **Automation Opportunities**: Manual process reduction
+- **Integration Improvements**: System connectivity enhancement
+- **User Experience**: Interface and workflow optimization
+
+## Tools and Resources
+
+### Documentation Templates
+- Audit request log
+- Finding response template
+- Corrective action plan
+- Progress tracking worksheet
+
+### Preparation Checklists
+- Pre-audit assessment checklist
+- Document readiness verification
+- Staff preparation guide
+- Facility setup checklist
+
+### Reference Materials
+- Regulatory citation guide
+- Sample audit reports
+- Common finding library
+- Best practice examples
+
+---
+
+*Last Updated: [12/19/2025]*
+*Version: 1.3.0*
+*Audit Standards: Generally Accepted Government Auditing Standards (GAGAS)*
+```
+
+
+
+
+
+
+docs/data-retention.md
+
+```markdown
+# Data Retention and Archival Policy
+
+## Purpose
+
+This document establishes standardized data retention periods and archival procedures for grant management documentation. The policy aligns with federal, state, and organizational requirements while ensuring accessibility and security of historical records.
+
+## Regulatory Framework
+
+### Federal Requirements
+
+#### 2 CFR Part 200.334 Retention Requirements
+- **General Rule**: Records must be retained for 3 years from submission of final expenditure report
+- **Exceptions**:
+  - Litigation, claim, or audit findings: retain until resolved
+  - Real property and equipment records: retain for 3 years after final disposition
+  - Records for income transactions after period of performance: retain for 3 years
+
+#### Specific Agency Extensions
+- **National Institutes of Health**: 3 years after closeout, or longer if specified
+- **National Science Foundation**: 3 years after submission of final expenditure report
+- **Department of Education**: Generally 3 years, but varies by program
+- **Department of Labor**: 3 years, with wage records requiring longer retention
+
+#### OMB Circular A-110
+- **Financial Records**: 3 years from submission of final expenditure report
+- **Supporting Documents**: Must be retained with financial records
+- **Property Records**: 3 years after final disposition
+
+### State Requirements
+
+#### Common State Standards
+- **Financial Records**: Typically 3-7 years depending on state
+- **Personnel Records**: Often 3-5 years after separation
+- **Contract Records**: Usually duration plus 3-7 years
+- **Tax Records**: Generally 3-4 years
+
+#### Notable State Variations
+- **California**: Up to 4 years for many records, longer for specific programs
+- **New York**: 6 years for many financial records
+- **Texas**: 3 years minimum, with extensions for certain programs
+- **Florida**: 5 years for most state grant records
+
+### Organizational Requirements
+
+#### Internal Policies
+- **Board Requirements**: May exceed regulatory minimums
+- **Donor Expectations**: Specific foundation or individual requirements
+- **Historical Preservation**: Organizational memory and continuity
+- **Best Practices**: Industry standard adherence
+
+## Retention Periods by Record Type
+
+### Financial Records
+
+#### Core Financial Documentation
+- **General Ledger**: 7 years after fiscal year end
+- **Accounts Payable**: 7 years after payment
+- **Accounts Receivable**: 7 years after collection
+- **Payroll Records**: 7 years after creation
+
+#### Grant-Specific Financial Records
+- **Expenditure Reports**: 7 years after submission
+- **Drawdown Requests**: 7 years after transaction
+- **Match Documentation**: 7 years after grant close
+- **Program Income Records**: 7 years after generation
+
+### Program Records
+
+#### Participant Documentation
+- **Eligibility Verification**: 3 years after service completion
+- **Service Records**: 3 years after service delivery
+- **Outcome Data**: 7 years after grant close
+- **Case Notes**: 3 years after case closure
+
+#### Performance Documentation
+- **Progress Reports**: 7 years after grant close
+- **Monitoring Reports**: 7 years after issuance
+- **Evaluation Studies**: Permanent retention
+- **Quality Assurance Records**: 3 years after creation
+
+### Administrative Records
+
+#### Personnel Documentation
+- **Employment Applications**: 3 years after hiring decision
+- **Personnel Files**: 7 years after separation
+- **Time and Effort Reports**: 3 years after certification
+- **Training Records**: 3 years after training completion
+
+#### Procurement Documentation
+- **Solicitations**: 3 years after contract completion
+- **Contracts**: 7 years after expiration
+- **Vendor Files**: 3 years after relationship termination
+- **Bid Evaluations**: 3 years after award
+
+### Compliance Records
+
+#### Regulatory Documentation
+- **Audit Reports**: Permanent retention
+- **Compliance Certifications**: 7 years after submission
+- **Policy Manuals**: Permanent retention of superseded versions
+- **Exception Approvals**: 7 years after grant close
+
+#### Communication Records
+- **Grantor Correspondence**: 7 years after grant close
+- **Internal Memoranda**: 3 years after creation
+- **Meeting Minutes**: Permanent retention
+- **Decision Documentation**: 7 years after decision
+
+## Archival Procedures
+
+### Record Classification
+
+#### Retention Tier System
+- **Tier 1 (Permanent)**: Historical, legal, or significant organizational value
+- **Tier 2 (Long-term)**: 7+ year retention requirements
+- **Tier 3 (Medium-term)**: 3-7 year retention requirements
+- **Tier 4 (Short-term)**: Less than 3 year retention
+
+#### Access Classification
+- **Public Records**: Available for public review
+- **Internal Records**: Organizational access only
+- **Confidential Records**: Limited access with authorization
+- **Restricted Records**: Highly sensitive, special handling required
+
+### Digital Archival Standards
+
+#### File Format Standards
+- **Documents**: PDF/A for long-term preservation
+- **Spreadsheets**: CSV or PDF for data preservation
+- **Databases**: SQL dump with schema documentation
+- **Email**: MBOX or PST with indexing
+
+#### Metadata Requirements
+- **Descriptive Metadata**: Title, creator, date, description
+- **Administrative Metadata**: Rights, retention period, access controls
+- **Technical Metadata**: File format, size, creation software
+- **Preservation Metadata**: Checksums, migration history
+
+### Physical Archival Standards
+
+#### Storage Environment
+- **Temperature**: 65-70°F (18-21°C)
+- **Humidity**: 35-50% relative humidity
+- **Light Control**: Limited exposure to ultraviolet light
+- **Security**: Controlled access and fire protection
+
+#### Organization System
+- **Indexing**: Comprehensive finding aid development
+- **Container Labeling**: Clear, consistent identification
+- **Location Tracking**: System for retrieval and return
+- **Condition Monitoring**: Regular preservation assessment
+
+## Destruction Procedures
+
+### Authorization Process
+
+#### Review and Approval
+- **Retention Review**: Verification of expiration date
+- **Legal Review**: Confirmation of no legal holds
+- **Management Approval**: Authorized destruction approval
+- **Documentation**: Record of destruction maintained
+
+#### Notification Requirements
+- **Internal Notification**: Department heads informed
+- **Regulatory Notification**: If required by specific programs
+- **Donor Notification**: If specified in grant agreements
+- **Public Notification**: For records subject to public records laws
+
+### Destruction Methods
+
+#### Digital Destruction
+- **Secure Deletion**: Multiple overwrite standards (DoD 5220.22-M)
+- **Media Destruction**: Physical destruction of storage media
+- **Cloud Data**: Provider-certified destruction procedures
+- **Verification**: Independent verification of destruction
+
+#### Physical Destruction
+- **Shredding**: Cross-cut or micro-cut standards
+- **Pulping**: For large volume paper destruction
+- **Incineration**: Secure facility with emission controls
+- **Recycling**: When security allows, with certified vendors
+
+### Documentation of Destruction
+
+#### Record Keeping
+- **Destruction Log**: Date, method, and volume record
+- **Certificate of Destruction**: Vendor certification
+- **Approval Documentation**: Authorization records
+- **Exception Documentation**: Records retained beyond period
+
+#### Audit Trail
+- **Retention Period**: Original retention requirement
+- **Review Date**: When destruction was authorized
+- **Method Verification**: How destruction was verified
+- **Responsible Party**: Who authorized and executed
+
+## Special Considerations
+
+### Litigation Holds
+
+#### Implementation
+- **Identification**: Records subject to legal action
+- **Notification**: All relevant personnel informed
+- **Suspension**: Destruction procedures halted
+- **Preservation**: Enhanced protection implemented
+
+#### Management
+- **Scope Definition**: Clear parameters for hold
+- **Communication**: Regular updates to affected parties
+- **Documentation**: Comprehensive hold records
+- **Release**: Formal termination when resolved
+
+### Electronic Records Management
+
+#### System Requirements
+- **Version Control**: Track changes and revisions
+- **Access Logs**: Record all access and modifications
+- **Export Capability**: Standard format data extraction
+- **Search Functionality**: Comprehensive retrieval tools
+
+#### Migration Planning
+- **Format Migration**: Periodic update to current formats
+- **System Migration**: Transfer between platforms
+- **Verification**: Data integrity confirmation
+- **Documentation**: Migration process and results
+
+### Privacy and Security
+
+#### Protected Information
+- **Personally Identifiable Information (PII)**: Enhanced protection required
+- **Health Information**: HIPAA compliance for PHI
+- **Financial Information**: Protection of account and transaction data
+- **Proprietary Information**: Confidential business information
+
+#### Security Measures
+- **Encryption**: At rest and in transit protection
+- **Access Controls**: Role-based permission systems
+- **Audit Trails**: Comprehensive access logging
+- **Incident Response**: Breach detection and response plans
+
+## Compliance Monitoring
+
+### Internal Audits
+
+#### Regular Reviews
+- **Quarterly**: High-volume record verification
+- **Annual**: Comprehensive retention compliance
+- **Pre-Destruction**: Verification before destruction
+- **Post-Migration**: System change validation
+
+#### Documentation
+- **Audit Reports**: Findings and recommendations
+- **Corrective Actions**: Deficiency resolution tracking
+- **Improvement Plans**: Process enhancement implementation
+- **Training Updates**: Staff education on changes
+
+### Regulatory Updates
+
+#### Monitoring Process
+- **Regulatory Tracking**: Changes to retention requirements
+- **Impact Assessment**: Organizational implication analysis
+- **Implementation Planning**: Policy and procedure updates
+- **Communication**: Staff notification of changes
+
+#### Documentation Updates
+- **Policy Revision**: Retention schedule updates
+- **Procedure Modification**: Process change implementation
+- **Training Materials**: Updated guidance development
+- **System Configuration**: Technical requirement implementation
+
+## Appendices
+
+### Appendix A: Retention Schedule Summary
+[Detailed table of all record types and retention periods]
+
+### Appendix B: Destruction Authorization Form
+[Standard form for destruction approval]
+
+### Appendix C: Litigation Hold Notice Template
+[Template for implementing legal holds]
+
+### Appendix D: Archival Metadata Standards
+[Complete metadata schema for digital preservation]
+
+---
+
+*Last Updated: [12/29/2025]*
+*Version: 1.2.0*
+*Review Cycle: Annual review and update*
+*Regulatory Compliance: Current through [Last Quarter/Year]*
+```
+
+
+
+
+
+templates/grant-application-template.md
+
+```markdown
+# Grant Application Template
+*Standardized format for grant applications with compliance-oriented structure*
+
+## Application Metadata
+
+### Basic Information
+- **Application ID**: [Auto-generated]
+- **Application Version**: 1.0
+- **Submission Date**: [Date]
+- **Applicant Organization**: [Legal Name]
+- **DUNS Number**: [If applicable]
+- **UEI Number**: [Unique Entity Identifier]
+- **Tax Status**: [e.g., 501(c)(3), Governmental, For-profit]
+- **Fiscal Year End**: [MM/DD]
+
+### Contact Information
+#### Primary Contact
+- **Name**: [Full Name]
+- **Title**: [Position Title]
+- **Email**: [Professional Email]
+- **Phone**: [Direct Line]
+- **Mailing Address**: [Street, City, State, ZIP]
+
+#### Financial Contact
+- **Name**: [Full Name]
+- **Title**: [Position Title]
+- **Email**: [Professional Email]
+- **Phone**: [Direct Line]
+
+#### Program Contact
+- **Name**: [Full Name]
+- **Title**: [Position Title]
+- **Email**: [Professional Email]
+- **Phone**: [Direct Line]
+
+## Section 1: Organizational Overview
+
+### 1.1 Organizational Background
+- **Year Established**: [Year]
+- **Mission Statement**: [Official mission statement]
+- **Primary Service Areas**: [Geographic coverage]
+- **Target Populations**: [Demographics served]
+- **Key Achievements**: [3-5 notable accomplishments]
+
+### 1.2 Legal Status and Compliance
+- **Incorporation Status**: [State and date of incorporation]
+- **IRS Determination Letter**: [Date and status]
+- **State Charity Registration**: [States registered]
+- **Audit Status**: [Most recent audit type and date]
+- **Debarment Status**: [Certification of non-debarment]
+
+### 1.3 Organizational Capacity
+- **Staff Size**: [Full-time equivalents]
+- **Annual Budget**: [Current fiscal year]
+- **Funding Sources**: [Percentage breakdown]
+- **Board of Directors**: [Number and meeting frequency]
+- **Key Partnerships**: [Major collaborative relationships]
+
+## Section 2: Program Design
+
+### 2.1 Program Overview
+- **Program Title**: [Descriptive name]
+- **Alignment with Funder Priorities**: [Specific alignment]
+- **Need Statement**: [Data-driven community needs]
+- **Program Goals**: [3-5 overarching goals]
+- **Theory of Change**: [Logic model or narrative]
+
+### 2.2 Target Population
+- **Primary Beneficiaries**: [Specific demographic]
+- **Eligibility Criteria**: [Clear, measurable criteria]
+- **Estimated Number Served**: [By year/project period]
+- **Recruitment Strategy**: [Outreach and enrollment methods]
+- **Retention Plan**: [Participant retention strategies]
+
+### 2.3 Program Activities
+- **Core Services**: [Direct service description]
+- **Service Delivery Model**: [Methodology and approach]
+- **Timeline**: [Major activities and milestones]
+- **Staffing Plan**: [Roles and responsibilities]
+- **Facilities and Equipment**: [Required resources]
+
+### 2.4 Performance Measurement
+- **Output Metrics**: [Quantifiable activities]
+- **Outcome Metrics**: [Short, medium, long-term outcomes]
+- **Data Collection Methods**: [Tools and processes]
+- **Evaluation Plan**: [Internal/external evaluation approach]
+- **Reporting Schedule**: [Performance report timing]
+
+## Section 3: Budget and Financial Information
+
+### 3.1 Budget Summary
+| Category | Requested Amount | Organization Match | In-Kind Contributions | Total Program Cost |
+|----------|------------------|-------------------|----------------------|-------------------|
+| Personnel | | | | |
+| Fringe Benefits | | | | |
+| Travel | | | | |
+| Equipment | | | | |
+| Supplies | | | | |
+| Contractual | | | | |
+| Other Direct Costs | | | | |
+| Indirect Costs | | | | |
+| **TOTALS** | | | | |
+
+### 3.2 Budget Narrative
+
+#### Personnel
+- **Position Titles**: [List all positions]
+- **Time Commitment**: [Percentage on project]
+- **Salary Rates**: [Justification of rates]
+- **Roles and Responsibilities**: [Brief description]
+
+#### Fringe Benefits
+- **Benefit Rate**: [Percentage or calculated amount]
+- **Rate Justification**: [Organization policy reference]
+- **Included Benefits**: [Types of benefits covered]
+
+#### Travel
+- **Purpose**: [Program-related travel needs]
+- **Destinations**: [Locations and frequency]
+- **Cost Estimates**: [Mileage, per diem, lodging rates]
+- **Policy Compliance**: [Organization travel policy]
+
+#### Equipment
+- **Item List**: [Individual items over $5,000]
+- **Justification**: [Program necessity explanation]
+- **Use Period**: [Project and post-project use]
+- **Disposition Plan**: [Post-grant handling]
+
+#### Supplies
+- **Categories**: [Office, program, other supplies]
+- **Quantities**: [Estimated amounts needed]
+- **Unit Costs**: [Market rate justification]
+- **Consumption Rate**: [Usage timeline]
+
+#### Contractual
+- **Contractor Types**: [Consultants, service providers]
+- **Scope of Work**: [Services to be provided]
+- **Selection Process**: [Competitive process description]
+- **Cost Basis**: [Fee structure and justification]
+
+#### Other Direct Costs
+- **Cost Categories**: [Space rental, utilities, etc.]
+- **Calculation Method**: [Allocation methodology]
+- **Necessity**: [Program requirement explanation]
+
+#### Indirect Costs
+- **Rate Type**: [Negotiated, de minimis, other]
+- **Rate Calculation**: [Methodology and base]
+- **Rate Agreement**: [Copy of negotiation if applicable]
+
+### 3.3 Match and Leveraged Resources
+- **Cash Match**: [Source and amount]
+- **In-Kind Contributions**: [Type and valuation method]
+- **Third-Party Contributions**: [Partner commitments]
+- **Volunteer Time**: [Estimated hours and value]
+
+### 3.4 Financial Management Systems
+- **Accounting System**: [Software and capabilities]
+- **Cost Allocation Method**: [Direct and indirect cost assignment]
+- **Timekeeping System**: [Labor distribution tracking]
+- **Internal Controls**: [Key financial controls]
+- **Audit History**: [Recent audit results]
+
+## Section 4: Compliance and Assurance
+
+### 4.1 Regulatory Compliance
+
+#### Civil Rights Compliance
+- [ ] Nondiscrimination assurance (Title VI)
+- [ ] Equal employment opportunity
+- [ ] Accessibility compliance (Section 504, ADA)
+- [ ] Limited English proficiency plan
+
+#### Environmental Compliance
+- [ ] National Environmental Policy Act (NEPA)
+- [ ] Endangered Species Act
+- [ ] Historic Preservation (Section 106)
+- [ ] Floodplain management
+
+#### Other Federal Requirements
+- [ ] Lobbying restrictions (Byrd Amendment)
+- [ ] Drug-free workplace
+- [ ] Anti-terrorism measures
+- [ ] Patriot Act compliance
+
+### 4.2 Program-Specific Requirements
+- [Insert funder-specific compliance requirements here]
+
+### 4.3 Certifications and Assurances
+
+#### Required Certifications
+- **Debarment and Suspension**: Certification of eligibility
+- **Drug-Free Workplace**: Compliance assurance
+- **Lobbying**: Disclosure if applicable
+- **Audit Compliance**: Single Audit Act requirements
+
+#### Organizational Assurances
+- **Financial Responsibility**: Adequate financial systems
+- **Program Management**: Capacity to implement
+- **Record Retention**: Compliance with retention periods
+- **Reporting Commitment**: Timely submission of reports
+
+## Section 5: Attachments
+
+### Required Attachments Checklist
+- [ ] IRS Determination Letter (nonprofits)
+- [ ] Organizational Chart
+- [ ] Most Recent Audit Report
+- [ ] Board of Directors List
+- [ ] Key Staff Resumes
+- [ ] Current Operating Budget
+- [ ] Indirect Cost Rate Agreement (if applicable)
+- [ ] Letters of Support/Commitment
+- [ ] Program Logic Model
+- [ ] Evaluation Tools/Instruments
+
+### Optional Attachments
+- [ ] Annual Report
+- [ ] News Articles/Media Coverage
+- [ ] Program Materials/Samples
+- [ ] Partnership Agreements
+- [ ] Licenses/Accreditations
+
+## Section 6: Submission and Approval
+
+### Applicant Certification
+I certify that:
+1. The information in this application is true and correct to the best of my knowledge
+2. The organization has the capacity to carry out the proposed activities
+3. All required assurances and certifications have been provided
+4. The budget accurately reflects program costs and organizational commitment
+
+**Authorized Representative Signature**: _________________________
+
+**Printed Name**: [Full Name]
+
+**Title**: [Position Title]
+
+**Date**: [Date]
+
+**Board Chair Approval** (if required): _________________________
+
+**Printed Name**: [Full Name]
+
+**Date**: [Date]
+
+## Submission Instructions
+
+### Electronic Submission
+- **Portal**: [Grant management system URL]
+- **Format**: PDF with searchable text
+- **Naming Convention**: OrgName_ProgramName_YYYYMMDD.pdf
+- **Confirmation**: Save submission confirmation number
+
+### Hard Copy Submission (if required)
+- **Number of Copies**: [Specified quantity]
+- **Binding Method**: [Specified format]
+- **Mailing Address**: [Grantor address]
+- **Postmark Deadline**: [Date and time]
+
+### Submission Timeline
+- **Internal Deadline**: [5 business days before funder deadline]
+- **Review Period**: [Quality assurance process]
+- **Final Approval**: [Authorized signature collection]
+- **Submission**: [Meet funder deadline requirements]
+
+---
+
+*Template Version: 3.1.0*
+*Last Updated: [12/29/2025]*
+*Based on: 2 CFR Part 200, Standard Grant Application Requirements*
+*Accessibility: WCAG 2.1 AA Compliant*
+```
+
+
+
+
+
+templates/reporting-template.md
+
+```markdown
+# Grant Reporting Template
+*Standardized format for performance and financial reporting*
+
+## Report Metadata
+
+### Basic Information
+- **Report ID**: [Auto-generated]
+- **Grant Number**: [Funder-assigned identifier]
+- **Grant Period**: [Start Date] to [End Date]
+- **Reporting Period**: [Start Date] to [End Date]
+- **Report Type**: [Progress | Financial | Final | Other]
+- **Due Date**: [Date]
+- **Submission Date**: [Date]
+- **Prepared By**: [Name, Title]
+- **Approved By**: [Name, Title]
+
+### Organization Information
+- **Legal Name**: [Organization Name]
+- **Address**: [Street, City, State, ZIP]
+- **UEI Number**: [Unique Entity Identifier]
+- **DUNS Number**: [If applicable]
+- **Contact Person**: [Name, Title, Phone, Email]
+
+## Section 1: Executive Summary
+
+### 1.1 Report Overview
+- **Period Accomplishments**: [3-5 key achievements]
+- **Challenges Encountered**: [Major obstacles and responses]
+- **Budget Status**: [High-level financial summary]
+- **Next Period Focus**: [Priority activities ahead]
+
+### 1.2 Significant Changes
+- **Program Modifications**: [Approved changes to scope]
+- **Personnel Changes**: [Key staff changes]
+- **Partner Changes**: [Collaboration modifications]
+- **Budget Revisions**: [Approved budget modifications]
+
+### 1.3 Compliance Status
+- **Regulatory Compliance**: [Status of major requirements]
+- **Reporting Compliance**: [Timeliness of submissions]
+- **Audit Status**: [Current audit position]
+- **Corrective Actions**: [Outstanding issue resolution]
+
+## Section 2: Performance Narrative
+
+### 2.1 Activities Completed
+
+#### Activity Summary
+| Activity | Planned | Completed | Variance | Explanation |
+|----------|---------|-----------|----------|-------------|
+| [Activity 1] | | | | |
+| [Activity 2] | | | | |
+| [Activity 3] | | | | |
+| [Activity 4] | | | | |
+
+#### Key Accomplishments
+- **Milestone Achievement**: [Specific milestones reached]
+- **Innovations Implemented**: [New approaches or improvements]
+- **Partnership Developments**: [Enhanced collaborations]
+- **Capacity Building**: [Organizational strengthening]
+
+### 2.2 Performance Metrics
+
+#### Output Metrics
+| Metric | Target | Actual | Variance | Notes |
+|--------|--------|--------|----------|-------|
+| [Metric 1] | | | | |
+| [Metric 2] | | | | |
+| [Metric 3] | | | | |
+| [Metric 4] | | | | |
+
+#### Outcome Metrics
+| Outcome Indicator | Baseline | Current | Change | Significance |
+|-------------------|----------|---------|--------|--------------|
+| [Outcome 1] | | | | |
+| [Outcome 2] | | | | |
+| [Outcome 3] | | | | |
+| [Outcome 4] | | | | |
+
+### 2.3 Participant Data
+
+#### Demographic Summary
+| Category | Planned | Enrolled | Completed | Retention Rate |
+|----------|---------|----------|-----------|----------------|
+| [Category 1] | | | | |
+| [Category 2] | | | | |
+| [Category 3] | | | | |
+| [Category 4] | | | | |
+
+#### Participant Stories
+- **Case Study 1**: [Brief narrative with permission]
+- **Case Study 2**: [Brief narrative with permission]
+- **Testimonials**: [Participant quotes with permission]
+- **Impact Examples**: [Specific life improvements]
+
+### 2.4 Challenges and Solutions
+
+#### Technical Challenges
+- **Description**: [Specific challenge encountered]
+- **Impact**: [Effect on program implementation]
+- **Response**: [Actions taken to address]
+- **Result**: [Outcome of intervention]
+- **Lessons Learned**: [Knowledge gained]
+
+#### Operational Challenges
+- **Description**: [Specific challenge encountered]
+- **Impact**: [Effect on program implementation]
+- **Response**: [Actions taken to address]
+- **Result**: [Outcome of intervention]
+- **Lessons Learned**: [Knowledge gained]
+
+#### External Challenges
+- **Description**: [Specific challenge encountered]
+- **Impact**: [Effect on program implementation]
+- **Response**: [Actions taken to address]
+- **Result**: [Outcome of intervention]
+- **Lessons Learned**: [Knowledge gained]
+
+## Section 3: Financial Report
+
+### 3.1 Budget Comparison
+
+#### Direct Costs
+| Budget Category | Approved Budget | Expenditures This Period | Total Expenditures to Date | Remaining Balance | Percent Spent |
+|-----------------|-----------------|--------------------------|----------------------------|-------------------|---------------|
+| Personnel | | | | | |
+| Fringe Benefits | | | | | |
+| Travel | | | | | |
+| Equipment | | | | | |
+| Supplies | | | | | |
+| Contractual | | | | | |
+| Other Direct | | | | | |
+| **Subtotal** | | | | | |
+
+#### Indirect Costs
+| Budget Category | Approved Budget | Expenditures This Period | Total Expenditures to Date | Remaining Balance | Percent Spent |
+|-----------------|-----------------|--------------------------|----------------------------|-------------------|---------------|
+| Indirect Costs | | | | | |
+| **Total Costs** | | | | | |
+
+### 3.2 Expenditure Detail
+
+#### Personnel Expenditures
+| Position | Budgeted Amount | Expenditures This Period | Total Expenditures | Variance | Explanation |
+|----------|-----------------|--------------------------|---------------------|----------|-------------|
+| [Position 1] | | | | | |
+| [Position 2] | | | | | |
+| [Position 3] | | | | | |
+
+#### Non-Personnel Expenditures
+| Expense Type | Budgeted Amount | Expenditures This Period | Total Expenditures | Variance | Explanation |
+|--------------|-----------------|--------------------------|---------------------|----------|-------------|
+| [Expense 1] | | | | | |
+| [Expense 2] | | | | | |
+| [Expense 3] | | | | | |
+
+### 3.3 Match Documentation
+
+#### Cash Match
+| Source | Committed Amount | Contributed This Period | Total Contributed | Balance | Verification |
+|--------|------------------|-------------------------|-------------------|---------|--------------|
+| [Source 1] | | | | | |
+| [Source 2] | | | | | |
+
+#### In-Kind Contributions
+| Contribution Type | Committed Value | Contributed This Period | Total Contributed | Balance | Valuation Method |
+|-------------------|-----------------|-------------------------|-------------------|---------|------------------|
+| [Type 1] | | | | | |
+| [Type 2] | | | | | |
+
+### 3.4 Financial Narrative
+
+#### Significant Variances
+- **Category**: [Budget category with variance]
+- **Variance Amount**: [Dollar and percentage difference]
+- **Explanation**: [Reason for variance]
+- **Corrective Action**: [Plan to address if needed]
+- **Impact on Program**: [Effect on implementation]
+
+#### Financial Management
+- **Internal Controls**: [Status of financial systems]
+- **Audit Preparation**: [Progress on audit requirements]
+- **Cash Management**: [Drawdown and reconciliation status]
+- **Cost Allocation**: [Methodology and implementation]
+
+## Section 4: Compliance Reporting
+
+### 4.1 Regulatory Compliance Status
+
+#### Civil Rights
+- [ ] Nondiscrimination policies implemented
+- [ ] Accessibility accommodations provided
+- [ ] Language access services available
+- [ ] Complaint procedures functional
+
+#### Program-Specific Requirements
+- [Insert funder-specific compliance checklist items]
+
+### 4.2 Documentation Status
+- **Participant Files**: [Complete and current percentage]
+- **Financial Records**: [Documentation completeness]
+- **Timekeeping Records**: [Certification status]
+- **Procurement Files**: [Competition documentation]
+
+### 4.3 Monitoring and Evaluation
+
+#### Internal Monitoring
+- **Site Visits Conducted**: [Number and findings]
+- **File Reviews Completed**: [Sample size and results]
+- **Quality Assurance**: [Process improvements]
+- **Staff Supervision**: [Performance management]
+
+#### External Evaluation
+- **Evaluation Progress**: [Status of evaluation activities]
+- **Preliminary Findings**: [Early results if available]
+- **Data Quality**: [Reliability and validity assessment]
+- **Utilization Plans**: [How findings will be used]
+
+## Section 5: Forward Planning
+
+### 5.1 Next Period Activities
+
+#### Activity Schedule
+| Activity | Start Date | End Date | Responsible Party | Resources Needed |
+|----------|------------|----------|-------------------|------------------|
+| [Activity 1] | | | | |
+| [Activity 2] | | | | |
+| [Activity 3] | | | | |
+
+#### Risk Assessment
+- **Identified Risks**: [Potential obstacles]
+- **Probability**: [Likelihood of occurrence]
+- **Impact**: [Potential effect on program]
+- **Mitigation Strategies**: [Preventive measures]
+- **Contingency Plans**: [Response preparations]
+
+### 5.2 Budget Projections
+
+#### Expenditure Forecast
+| Category | Remaining Budget | Projected Expenditures | Projected Variance |
+|----------|-----------------|------------------------|-------------------|
+| Personnel | | | |
+| Non-Personnel | | | |
+| **Total** | | | |
+
+#### Cash Flow Needs
+- **Next Quarter Requirements**: [Estimated funding needs]
+- **Match Resources**: [Availability of matching funds]
+- **Contingency Reserves**: [Unanticipated needs buffer]
+- **Drawdown Schedule**: [Planned funding requests]
+
+## Section 6: Attachments
+
+### Required Attachments
+- [ ] Detailed expenditure ledger
+- [ ] Timesheet certifications (sample)
+- [ ] Participant roster (de-identified)
+- [ ] Equipment inventory update
+- [ ] Updated organizational chart
+- [ ] Staff changes notification
+
+### Optional Attachments
+- [ ] Success stories with releases
+- [ ] Media coverage
+- [ ] Event photographs (with releases)
+- [ ] Partner letters
+- [ ] Training materials developed
+
+## Section 7: Certification
+
+### Grantee Certification
+I certify that:
+1. The information in this report is true and complete to the best of my knowledge
+2. All expenditures reported were for allowable grant purposes
+3. Required match contributions have been provided as reported
+4. The organization is in compliance with all grant requirements
+
+**Authorized Representative Signature**: _________________________
+
+**Printed Name**: [Full Name]
+
+**Title**: [Position Title]
+
+**Date**: [Date]
+
+### Financial Officer Certification
+I certify that:
+1. The financial information presented is accurate
+2. The accounting system properly tracks grant expenditures
+3. Internal controls are in place and functioning
+4. Required documentation is maintained and available for audit
+
+**Financial Officer Signature**: _________________________
+
+**Printed Name**: [Full Name]
+
+**Title**: [Position Title]
+
+**Date**: [Date]
+
+## Submission Instructions
+
+### Electronic Submission
+- **Portal**: [Grant management system URL]
+- **Format**: PDF with searchable text
+- **Naming Convention**: GrantNumber_ReportType_YYYYMMDD.pdf
+- **Supporting Documents**: [Attachment requirements]
+
+### Submission Checklist
+- [ ] All sections completed
+- [ ] Required certifications signed
+- [ ] Attachments included
+- [ ] Format requirements met
+- [ ] Submitted by deadline
+
+### Contact for Questions
+- **Program Questions**: [Name, Phone, Email]
+- **Financial Questions**: [Name, Phone, Email]
+- **Technical Support**: [Help desk contact]
+
+---
+
+*Template Version: 2.2.0*
+*Last Updated: [12/29/2025]*
+*Based on: 2 CFR Part 200.328 Monitoring and reporting requirements*
+*Accessibility: WCAG 2.1 AA Compliant*
+```
+
+
+
+
+
+
+
+templates/compliance-attestation.md
+
+```markdown
+# Compliance Attestation Statement
+*Standardized certification of regulatory compliance for grant recipients*
+
+## Attestation Metadata
+
+### Basic Information
+- **Attestation ID**: [Auto-generated]
+- **Grant Number**: [Funder-assigned identifier]
+- **Grant Period**: [Start Date] to [End Date]
+- **Attestation Period**: [Covered timeframe]
+- **Attestation Date**: [Date of certification]
+- **Organization Name**: [Legal Name]
+- **UEI Number**: [Unique Entity Identifier]
+- **DUNS Number**: [If applicable]
+
+### Authorized Representatives
+#### Primary Certifying Official
+- **Name**: [Full Name]
+- **Title**: [Position Title]
+- **Email**: [Professional Email]
+- **Phone**: [Direct Line]
+- **Signature Authority**: [Yes/No]
+
+#### Financial Certifying Official
+- **Name**: [Full Name]
+- **Title**: [Position Title]
+- **Email**: [Professional Email]
+- **Phone**: [Direct Line]
+
+## Section 1: General Compliance Attestations
+
+### 1.1 Organizational Eligibility
+I hereby attest that the organization:
+
+[ ] Is not currently debarred, suspended, or otherwise excluded from receiving federal funds
+[ ] Has not been convicted of, or had a civil judgment rendered against it for, fraud or criminal offense in connection with obtaining or performing a federal award
+[ ] Is not presently indicted or otherwise criminally or civilly charged for commission of any of the offenses enumerated above
+[ ] Has not within a three-year period preceding this application had one or more public transactions terminated for cause or default
+
+### 1.2 Financial Management Systems
+I hereby attest that the organization maintains financial management systems that:
+
+[ ] Identify federal awards separately and distinctly
+[ ] Record expenditures by budget category and project period
+[ ] Provide for accurate, current, and complete disclosure of financial results
+[ ] Establish effective internal controls for safeguarding assets
+[ ] Compare actual expenditures with budgeted amounts
+[ ] Support charges to federal awards with source documentation
+- **Last Audit Date**: [Date]
+- **Audit Type**: [Single Audit, Program-Specific, Internal]
+- **Audit Findings**: [Number of findings, if any]
+- **Corrective Action Status**: [Status of resolution]
+
+### 1.3 Procurement Standards
+I hereby attest that the organization's procurement procedures:
+
+[ ] Comply with 2 CFR Part 200.317-326 requirements
+[ ] Maintain written procurement policies and procedures
+[ ] Conduct all procurement transactions in a manner providing full and open competition
+[ ] Maintain documentation sufficient to detail procurement history
+[ ] Avoid acquisition of unnecessary or duplicative items
+[ ] Promote cost-effective use of shared services
+- **Procurement Policy Date**: [Last revision date]
+- **Conflict of Interest Policy**: [Exists and implemented]
+- **Vendor Debarment Checks**: [Routine procedure]
+
+## Section 2: Program-Specific Compliance
+
+### 2.1 Allowable Costs
+I hereby attest that all costs charged to the grant are:
+
+[ ] Allowable under the applicable cost principles (2 CFR Part 200, Subpart E)
+[ ] Allocable to the grant under generally accepted accounting principles
+[ ] Reasonable in amount and necessary for program operations
+[ ] Consistently treated across all funding sources
+[ ] Supported by adequate documentation
+[ ] Incurred during the approved grant period
+
+### 2.2 Time and Effort Reporting
+I hereby attest that the organization's timekeeping system:
+
+[ ] Reflects an after-the-fact determination of actual activity
+[ ] Accounts for total activity for which employees are compensated
+[ ] Is prepared at least monthly and coincides with pay periods
+[ ] Is signed by the employee and supervisor
+[ ] Reflects distribution of activity by grant or cost objective
+[ ] Is maintained in accordance with record retention requirements
+- **System Type**: [Electronic/Manual]
+- **Certification Frequency**: [Monthly/Quarterly/Semi-annually]
+- **Sample Review Conducted**: [Yes/No]
+- **Last Review Date**: [Date]
+
+### 2.3 Property Management
+I hereby attest that equipment acquired with grant funds:
+
+[ ] Is properly recorded in equipment inventory records
+[ ] Is used for authorized purposes during the grant period
+[ ] Is adequately maintained and safeguarded
+- **Equipment Inventory Updated**: [Date]
+- **Annual Physical Inventory Conducted**: [Yes/No]
+- **Disposition Plan Established**: [Yes/No]
+
+### 2.4 Program Income
+I hereby attest that program income:
+
+[ ] Is identified and recorded separately from other funds
+[ ] Is used in accordance with grant terms (additive/deductive)
+[ ] Is accounted for in the financial management system
+[ ] Is reported on required financial reports
+- **Program Income Policy**: [Exists and implemented]
+- **Tracking System**: [Description of system]
+
+## Section 3: Civil Rights and Accessibility
+
+### 3.1 Nondiscrimination Compliance
+I hereby attest that the organization:
+
+[ ] Does not discriminate on the basis of race, color, national origin, sex, age, or disability
+[ ] Has implemented required Title VI nondiscrimination policies
+[ ] Provides meaningful access to limited English proficient individuals
+[ ] Maintains records of complaints and resolutions
+- **Nondiscrimination Policy Date**: [Last revision date]
+- **Language Access Plan**: [Exists and implemented]
+- **Complaints Received This Period**: [Number]
+
+### 3.2 Disability Accessibility
+I hereby attest that the organization:
+
+[ ] Complies with Section 504 of the Rehabilitation Act
+[ ] Complies with Americans with Disabilities Act (ADA) requirements
+[ ] Provides reasonable accommodations for participants and employees
+[ ] Ensures program accessibility in facilities and services
+- **Facility Accessibility Assessment**: [Last conducted date]
+- **ADA Coordinator Designated**: [Yes/No]
+- **Alternative Format Materials Available**: [Yes/No]
+
+### 3.3 Equal Employment Opportunity
+I hereby attest that the organization:
+
+[ ] Maintains equal employment opportunity policies
+[ ] Does not discriminate in hiring or employment practices
+[ ] Provides reasonable accommodations for employees with disabilities
+[ ] Maintains required employment records
+- **EEO Policy Date**: [Last revision date]
+- **EEO-1 Report Filed**: [If applicable, date]
+- **Workforce Demographic Data**: [Maintained and reviewed]
+
+## Section 4: Special Compliance Areas
+
+### 4.1 Lobbying Restrictions
+I hereby attest that:
+
+[ ] No federal funds have been used for lobbying activities
+[ ] The organization files required lobbying disclosure reports
+[ ] The organization complies with Byrd Amendment restrictions
+- **Lobbying Disclosure Act Registration**: [If applicable]
+- **Reporting Requirements Met**: [Yes/No]
+
+### 4.2 Drug-Free Workplace
+I hereby attest that the organization:
+
+[ ] Maintains a drug-free workplace policy
+[ ] Provides required notifications to employees
+[ ] Takes appropriate personnel actions for violations
+[ ] Maintains compliance with Drug-Free Workplace Act
+- **Policy Distribution Date**: [Last distribution]
+- **Employee Acknowledgment**: [On file]
+- **Violations This Period**: [Number, if any]
+
+### 4.3 Environmental Compliance
+I hereby attest that the organization:
+
+[ ] Complies with National Environmental Policy Act (NEPA)
+[ ] Conducts required environmental reviews for construction
+[ ] Maintains compliance with other applicable environmental laws
+- **Environmental Review Status**: [Complete/Pending/Not Required]
+- **Required Permits Obtained**: [List if applicable]
+
+## Section 5: Monitoring and Reporting
+
+### 5.1 Reporting Compliance
+I hereby attest that the organization:
+
+[ ] Submits required reports by established deadlines
+[ ] Provides complete and accurate information in reports
+[ ] Maintains documentation supporting reported information
+[ ] Cooperates with monitoring visits and audits
+- **Past Due Reports**: [Number, if any]
+- **Report Quality Issues**: [Noted by funder, if any]
+- **Monitoring Visit Schedule**: [Last/Next date]
+
+### 5.2 Record Retention
+I hereby attest that the organization:
+
+[ ] Maintains records for the required retention period (3 years from final report)
+[ ] Secures records against loss, damage, or unauthorized access
+[ ] Provides access to records for audit or examination
+[ ] Maintains electronic records in accessible formats
+- **Record Retention Policy Date**: [Last revision]
+- **Storage System Description**: [Physical/Digital/Hybrid]
+- **Disaster Recovery Plan**: [Exists and tested]
+
+### 5.3 Subrecipient Monitoring
+I hereby attest that for any subawards:
+
+[ ] Risk assessments are conducted before awarding funds
+[ ] Written agreements include required flow-down provisions
+[ ] Monitoring is conducted based on risk assessment
+[ ] Corrective actions are required for identified issues
+- **Number of Active Subawards**: [Count]
+- **Monitoring Schedule**: [Frequency based on risk]
+- **Findings This Period**: [Number, if any]
+
+## Section 6: Certification and Signatures
+
+### 6.1 Comprehensive Certification
+I certify that, to the best of my knowledge and belief:
+
+1. All statements and information contained in this attestation are true and correct
+2. The organization is in compliance with all applicable federal statutes, regulations, and the terms and conditions of the award
+3. All costs charged to the grant are allowable and properly documented
+4. The organization has disclosed all required information to the awarding agency
+5. The organization accepts responsibility for any disallowed costs resulting from noncompliance
+
+### 6.2 Signature of Authorized Representative
+
+**I understand that false statements or claims may result in civil or criminal penalties, including fines and imprisonment under 18 U.S.C. §§ 287 and 1001.**
+
+**Printed Name**: [Full Name]
+
+**Title**: [Position Title]
+
+**Signature**: _________________________
+
+**Date**: [Date]
+
+### 6.3 Signature of Financial Officer
+
+**Printed Name**: [Full Name]
+
+**Title**: [Position Title]
+
+**Signature**: _________________________
+
+**Date**: [Date]
+
+### 6.4 Witness (Optional)
+
+**Printed Name**: [Full Name]
+
+**Title**: [Position Title]
+
+**Signature**: _________________________
+
+**Date**: [Date]
+
+## Section 7: Supporting Documentation
+
+### Documentation Checklist
+The following documentation is maintained and available for review:
+
+#### Financial Documentation
+- [ ] Approved budget and subsequent revisions
+- [ ] Expenditure ledgers with supporting documentation
+- [ ] Time and effort reports with certifications
+- [ ] Equipment inventory records
+- [ ] Procurement documentation
+- [ ] Match contribution documentation
+
+#### Program Documentation
+- [ ] Participant eligibility documentation
+- [ ] Service delivery records
+- [ ] Performance measurement data
+- [ ] Monitoring and evaluation reports
+- [ ] Subrecipient agreements and monitoring
+
+#### Compliance Documentation
+- [ ] Policies and procedures manuals
+- [ ] Training records
+- [ ] Civil rights compliance documentation
+- [ ] Audit reports and corrective action plans
+- [ ] Previous monitoring reports
+
+### Document Location
+- **Primary Location**: [Address, Room, System]
+- **Contact Person**: [Name, Title, Phone]
+- **Access Procedures**: [Requirements for access]
+- **Retention Schedule**: [Applicable retention period]
+
+## Section 8: Submission
+
+### Submission Instructions
+- **Submit to**: [Grantor office/contact]
+- **Submission Method**: [Electronic portal/Email/Mail]
+- **Due Date**: [Date]
+- **Retain Copy**: [Organization retains signed original]
+
+### Acknowledgement
+Upon submission, the grantor will:
+1. Review the attestation for completeness
+2. Follow up on any areas requiring clarification
+3. Maintain the attestation in grant files
+4. Use the attestation in monitoring and audit activities
+
+### Questions or Revisions
+For questions or to report changes in compliance status:
+- **Contact**: [Name, Title]
+- **Phone**: [Number]
+- **Email**: [Address]
+- **Required Update Timeline**: [Days after change]
+
+---
+
+*Template Version: 1.3.0*
+*Last Updated: [12/29/2025]*
+*Based on: 2 CFR Part 200 and OMB Compliance Supplement*
+*Legal References: 18 U.S.C. §§ 287, 1001; 31 U.S.C. § 3729*
+```
+
+
+
+
+
+schemas/grant.json
+
+```json
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://grantready.org/schemas/grant/v2.0.0",
+  "title": "Grant Data Schema",
+  "description": "Standardized schema for grant metadata, terms, and compliance requirements",
+  "type": "object",
+  "required": [
+    "grantId",
+    "grantNumber",
+    "grantTitle",
+    "grantor",
+    "recipient",
+    "grantPeriod",
+    "budget",
+    "complianceRequirements"
+  ],
+  "properties": {
+    "metadata": {
+      "type": "object",
+      "description": "Schema and document metadata",
+      "properties": {
+        "schemaVersion": {
+          "type": "string",
+          "description": "Version of this schema",
+          "const": "2.0.0"
+        },
+        "createdDate": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Date and time this grant record was created"
+        },
+        "lastModifiedDate": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Date and time this grant record was last modified"
+        },
+        "sourceSystem": {
+          "type": "string",
+          "description": "System that created this record"
+        },
+        "recordId": {
+          "type": "string",
+          "description": "Unique identifier for this grant record"
+        }
+      },
+      "required": ["schemaVersion", "createdDate", "recordId"]
+    },
+    "grantId": {
+      "type": "string",
+      "description": "Unique identifier for the grant within the recipient's system"
+    },
+    "grantNumber": {
+      "type": "string",
+      "description": "Official grant number assigned by the grantor"
+    },
+    "grantTitle": {
+      "type": "string",
+      "description": "Official title of the grant",
+      "maxLength": 500
+    },
+    "grantDescription": {
+      "type": "string",
+      "description": "Detailed description of the grant purpose and activities"
+    },
+    "grantType": {
+      "type": "string",
+      "description": "Classification of grant type",
+      "enum": [
+        "formula",
+        "discretionary",
+        "cooperative agreement",
+        "contract",
+        "loan",
+        "block",
+        "categorical",
+        "project",
+        "research",
+        "training",
+        "construction",
+        "operating",
+        "capital",
+        "technical assistance",
+        "planning"
+      ]
+    },
+    "fundingSource": {
+      "type": "object",
+      "description": "Source of funding for the grant",
+      "properties": {
+        "agency": {
+          "type": "string",
+          "description": "Funding agency name"
+        },
+        "program": {
+          "type": "string",
+          "description": "Specific program name"
+        },
+        "catalogOfFederalDomesticAssistanceNumber": {
+          "type": "string",
+          "description": "CFDA number if federal funding",
+          "pattern": "^\\d{2}\\.\\d{3}$"
+        },
+        "appropriation": {
+          "type": "string",
+          "description": "Appropriation bill or source"
+        },
+        "fundingYear": {
+          "type": "integer",
+          "description": "Fiscal year of funding"
+        }
+      },
+      "required": ["agency"]
+    },
+    "grantor": {
+      "type": "object",
+      "description": "Entity awarding the grant",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Legal name of grantor"
+        },
+        "uei": {
+          "type": "string",
+          "description": "Unique Entity Identifier",
+          "pattern": "^[A-Z0-9]{12}$"
+        },
+        "duns": {
+          "type": "string",
+          "description": "DUNS number if applicable",
+          "pattern": "^\\d{9}$"
+        },
+        "address": {
+          "$ref": "#/$defs/address"
+        },
+        "contact": {
+          "$ref": "#/$defs/contact"
+        }
+      },
+      "required": ["name"]
+    },
+    "recipient": {
+      "type": "object",
+      "description": "Entity receiving the grant",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Legal name of recipient"
+        },
+        "uei": {
+          "type": "string",
+          "description": "Unique Entity Identifier",
+          "pattern": "^[A-Z0-9]{12}$"
+        },
+        "duns": {
+          "type": "string",
+          "description": "DUNS number if applicable",
+          "pattern": "^\\d{9}$"
+        },
+        "ein": {
+          "type": "string",
+          "description": "Employer Identification Number",
+          "pattern": "^\\d{2}-\\d{7}$"
+        },
+        "organizationType": {
+          "type": "string",
+          "description": "Type of recipient organization",
+          "enum": [
+            "nonprofit",
+            "governmental_state",
+            "governmental_local",
+            "governmental_tribal",
+            "educational",
+            "healthcare",
+            "for_profit",
+            "individual",
+            "other"
+          ]
+        },
+        "address": {
+          "$ref": "#/$defs/address"
+        },
+        "contact": {
+          "$ref": "#/$defs/contact"
+        }
+      },
+      "required": ["name", "uei", "organizationType"]
+    },
+    "grantPeriod": {
+      "type": "object",
+      "description": "Time period for grant performance",
+      "properties": {
+        "startDate": {
+          "type": "string",
+          "format": "date",
+          "description": "Official start date of grant period"
+        },
+        "endDate": {
+          "type": "string",
+          "format": "date",
+          "description": "Official end date of grant period"
+        },
+        "periodOfPerformance": {
+          "type": "string",
+          "description": "Total period of performance in months"
+        },
+        "budgetPeriods": {
+          "type": "array",
+          "description": "Breakdown of budget periods if different from overall period",
+          "items": {
+            "type": "object",
+            "properties": {
+              "periodNumber": {
+                "type": "integer",
+                "description": "Budget period number"
+              },
+              "startDate": {
+                "type": "string",
+                "format": "date"
+              },
+              "endDate": {
+                "type": "string",
+                "format": "date"
+              }
+            },
+            "required": ["periodNumber", "startDate", "endDate"]
+          }
+        }
+      },
+      "required": ["startDate", "endDate"]
+    },
+    "budget": {
+      "type": "object",
+      "description": "Grant budget information",
+      "properties": {
+        "totalAwardAmount": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Total amount awarded"
+        },
+        "federalShare": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Federal portion of award"
+        },
+        "nonFederalShare": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Non-federal portion (match)"
+        },
+        "budgetCategories": {
+          "type": "array",
+          "description": "Detailed budget by category",
+          "items": {
+            "type": "object",
+            "properties": {
+              "category": {
+                "type": "string",
+                "enum": [
+                  "personnel",
+                  "fringe_benefits",
+                  "travel",
+                  "equipment",
+                  "supplies",
+                  "contractual",
+                  "construction",
+                  "other_direct",
+                  "indirect_costs"
+                ]
+              },
+              "amount": {
+                "type": "number",
+                "minimum": 0
+              },
+              "description": {
+                "type": "string"
+              }
+            },
+            "required": ["category", "amount"]
+          }
+        },
+        "indirectCostRate": {
+          "type": "object",
+          "description": "Indirect cost rate information",
+          "properties": {
+            "rateType": {
+              "type": "string",
+              "enum": ["negotiated", "de_minimis", "other"]
+            },
+            "rate": {
+              "type": "number",
+              "minimum": 0
+            },
+            "base": {
+              "type": "string",
+              "enum": ["modified_total_direct_costs", "salaries_and_wages", "other"]
+            },
+            "agreementNumber": {
+              "type": "string"
+            },
+            "expirationDate": {
+              "type": "string",
+              "format": "date"
+            }
+          }
+        }
+      },
+      "required": ["totalAwardAmount"]
+    },
+    "programInformation": {
+      "type": "object",
+      "description": "Program-specific information",
+      "properties": {
+        "programAreas": {
+          "type": "array",
+          "description": "Program area classifications",
+          "items": {
+            "type": "string"
+          }
+        },
+        "serviceLocations": {
+          "type": "array",
+          "description": "Geographic service locations",
+          "items": {
+            "$ref": "#/$defs/address"
+          }
+        },
+        "targetPopulation": {
+          "type": "object",
+          "description": "Target population demographics",
+          "properties": {
+            "ageGroups": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "incomeLevels": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "specialPopulations": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "estimatedParticipants": {
+              "type": "integer",
+              "minimum": 0
+            }
+          }
+        },
+        "performanceMeasures": {
+          "type": "array",
+          "description": "Required performance measures",
+          "items": {
+            "type": "object",
+            "properties": {
+              "measureId": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "target": {
+                "type": ["number", "string"]
+              },
+              "frequency": {
+                "type": "string",
+                "enum": ["quarterly", "semi_annual", "annual", "end_of_grant"]
+              }
+            },
+            "required": ["measureId", "description"]
+          }
+        }
+      }
+    },
+    "complianceRequirements": {
+      "type": "object",
+      "description": "Compliance requirements for this grant",
+      "properties": {
+        "cfrPart200": {
+          "type": "boolean",
+          "description": "Subject to 2 CFR Part 200 requirements"
+        },
+        "singleAudit": {
+          "type": "boolean",
+          "description": "Subject to Single Audit Act requirements"
+        },
+        "auditThreshold": {
+          "type": "number",
+          "description": "Expenditure threshold for audit"
+        },
+        "specialConditions": {
+          "type": "array",
+          "description": "Special conditions attached to award",
+          "items": {
+            "type": "string"
+          }
+        },
+        "reportingRequirements": {
+          "type": "object",
+          "description": "Reporting requirements",
+          "properties": {
+            "financialReports": {
+              "type": "string",
+              "enum": ["quarterly", "semi_annual", "annual", "final"]
+            },
+            "performanceReports": {
+              "type": "string",
+              "enum": ["quarterly", "semi_annual", "annual", "final"]
+            },
+            "inventoryReports": {
+              "type": "boolean"
+            },
+            "closeoutReports": {
+              "type": "boolean"
+            }
+          }
+        },
+        "allowedCosts": {
+          "type": "object",
+          "description": "Cost allowability information",
+          "properties": {
+            "equipmentThreshold": {
+              "type": "number",
+              "description": "Equipment capitalization threshold"
+            },
+            "priorApprovalRequired": {
+              "type": "array",
+              "description": "Costs requiring prior approval",
+              "items": {
+                "type": "string",
+                "enum": ["equipment", "international_travel", "participant_support", "subawards", "budget_revisions"]
+              }
+            }
+          }
+        }
+      },
+      "required": ["cfrPart200"]
+    },
+    "subawards": {
+      "type": "array",
+      "description": "Subawards under this grant",
+      "items": {
+        "type": "object",
+        "properties": {
+          "subawardId": {
+            "type": "string"
+          },
+          "subrecipient": {
+            "$ref": "#/$defs/organization"
+          },
+          "amount": {
+            "type": "number",
+            "minimum": 0
+          },
+          "purpose": {
+            "type": "string"
+          },
+          "period": {
+            "$ref": "#/$defs/dateRange"
+          }
+        },
+        "required": ["subawardId", "subrecipient", "amount"]
+      }
+    },
+    "keyDates": {
+      "type": "object",
+      "description": "Important dates for grant management",
+      "properties": {
+        "applicationSubmitted": {
+          "type": "string",
+          "format": "date"
+        },
+        "awardDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "obligationDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "firstDrawdownDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "nextReportingDueDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "closeoutDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "recordRetentionUntil": {
+          "type": "string",
+          "format": "date"
+        }
+      }
+    },
+    "status": {
+      "type": "object",
+      "description": "Current status of the grant",
+      "properties": {
+        "overallStatus": {
+          "type": "string",
+          "enum": [
+            "planning",
+            "applied",
+            "awarded",
+            "active",
+            "suspended",
+            "terminated",
+            "closed",
+            "completed"
+          ]
+        },
+        "financialStatus": {
+          "type": "string",
+          "enum": [
+            "no_drawdowns",
+            "partial_drawdowns",
+            "fully_drawn",
+            "overspent",
+            "under_spent"
+          ]
+        },
+        "programStatus": {
+          "type": "string",
+          "enum": [
+            "not_started",
+            "in_progress",
+            "behind_schedule",
+            "on_track",
+            "completed",
+            "terminated"
+          ]
+        },
+        "complianceStatus": {
+          "type": "string",
+          "enum": ["compliant", "monitoring", "corrective_action", "non_compliant"]
+        },
+        "lastStatusUpdate": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": ["overallStatus", "lastStatusUpdate"]
+    },
+    "attachments": {
+      "type": "array",
+      "description": "Documents attached to this grant record",
+      "items": {
+        "type": "object",
+        "properties": {
+          "documentId": {
+            "type": "string"
+          },
+          "documentType": {
+            "type": "string",
+            "enum": [
+              "application",
+              "award_notice",
+              "budget",
+              "report",
+              "amendment",
+              "correspondence",
+              "audit",
+              "closeout"
+            ]
+          },
+          "fileName": {
+            "type": "string"
+          },
+          "fileType": {
+            "type": "string"
+          },
+          "uploadDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "description": {
+            "type": "string"
+          }
+        },
+        "required": ["documentId", "documentType", "fileName", "uploadDate"]
+      }
+    }
+  },
+  "$defs": {
+    "address": {
+      "type": "object",
+      "properties": {
+        "street1": {
+          "type": "string"
+        },
+        "street2": {
+          "type": "string"
+        },
+        "city": {
+          "type": "string"
+        },
+        "state": {
+          "type": "string",
+          "pattern": "^[A-Z]{2}$"
+        },
+        "postalCode": {
+          "type": "string",
+          "pattern": "^\\d{5}(-\\d{4})?$"
+        },
+        "country": {
+          "type": "string",
+          "default": "US"
+        }
+      },
+      "required": ["street1", "city", "state", "postalCode"]
+    },
+    "contact": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string",
+          "format": "email"
+        },
+        "phone": {
+          "type": "string",
+          "pattern": "^\\+?1?\\d{10}$"
+        },
+        "phoneExtension": {
+          "type": "string"
+        }
+      },
+      "required": ["name", "email"]
+    },
+    "organization": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "uei": {
+          "type": "string",
+          "pattern": "^[A-Z0-9]{12}$"
+        },
+        "organizationType": {
+          "type": "string"
+        }
+      },
+      "required": ["name"]
+    },
+    "dateRange": {
+      "type": "object",
+      "properties": {
+        "startDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "endDate": {
+          "type": "string",
+          "format": "date"
+        }
+      },
+      "required": ["startDate", "endDate"]
+    }
+  },
+  "examples": [
+    {
+      "metadata": {
+        "schemaVersion": "2.0.0",
+        "createdDate": "2024-01-15T10:30:00Z",
+        "lastModifiedDate": "2024-01-15T10:30:00Z",
+        "sourceSystem": "GrantReady v3.2",
+        "recordId": "gr-2024-001"
+      },
+      "grantId": "GR2024001",
+      "grantNumber": "HHS-2024-ABC-12345",
+      "grantTitle": "Community Health Outreach Program",
+      "grantDescription": "Program to provide health education and screening services to underserved communities",
+      "grantType": "discretionary",
+      "fundingSource": {
+        "agency": "Department of Health and Human Services",
+        "program": "Community Health Initiatives",
+        "catalogOfFederalDomesticAssistanceNumber": "93.123",
+        "fundingYear": 2024
+      },
+      "grantor": {
+        "name": "Department of Health and Human Services",
+        "uei": "ABC123DEF456",
+        "contact": {
+          "name": "Jane Smith",
+          "title": "Grants Management Specialist",
+          "email": "jane.smith@hhs.gov",
+          "phone": "2025550123"
+        }
+      },
+      "recipient": {
+        "name": "Community Health Nonprofit Inc.",
+        "uei": "DEF456GHI789",
+        "ein": "12-3456789",
+        "organizationType": "nonprofit",
+        "address": {
+          "street1": "123 Main Street",
+          "city": "Anytown",
+          "state": "CA",
+          "postalCode": "90210"
+        },
+        "contact": {
+          "name": "John Doe",
+          "title": "Executive Director",
+          "email": "john.doe@communityhealth.org",
+          "phone": "3105559876"
+        }
+      },
+      "grantPeriod": {
+        "startDate": "2024-02-01",
+        "endDate": "2025-01-31",
+        "periodOfPerformance": "12 months"
+      },
+      "budget": {
+        "totalAwardAmount": 250000,
+        "federalShare": 200000,
+        "nonFederalShare": 50000,
+        "budgetCategories": [
+          {
+            "category": "personnel",
+            "amount": 150000,
+            "description": "Program staff salaries"
+          },
+          {
+            "category": "supplies",
+            "amount": 25000,
+            "description": "Educational materials and screening supplies"
+          }
+        ]
+      },
+      "complianceRequirements": {
+        "cfrPart200": true,
+        "singleAudit": true,
+        "auditThreshold": 750000,
+        "reportingRequirements": {
+          "financialReports": "quarterly",
+          "performanceReports": "quarterly"
+        }
+      },
+      "status": {
+        "overallStatus": "awarded",
+        "financialStatus": "no_drawdowns",
+        "programStatus": "not_started",
+        "lastStatusUpdate": "2024-01-15T10:30:00Z"
+      }
+    }
+  ]
+}
+```
+
+schemas/disbursement.json
+
+```json
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://grantready.org/schemas/disbursement/v1.2.0",
+  "title": "Disbursement Data Schema",
+  "description": "Standardized schema for grant fund disbursements, drawdowns, and payment tracking",
+  "type": "object",
+  "required": [
+    "disbursementId",
+    "grantId",
+    "disbursementDate",
+    "amount",
+    "disbursementType",
+    "status"
+  ],
+  "properties": {
+    "metadata": {
+      "type": "object",
+      "description": "Schema and document metadata",
+      "properties": {
+        "schemaVersion": {
+          "type": "string",
+          "description": "Version of this schema",
+          "const": "1.2.0"
+        },
+        "createdDate": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Date and time this disbursement record was created"
+        },
+        "lastModifiedDate": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Date and time this disbursement record was last modified"
+        },
+        "sourceSystem": {
+          "type": "string",
+          "description": "System that created this record"
+        },
+        "recordId": {
+          "type": "string",
+          "description": "Unique identifier for this disbursement record"
+        }
+      },
+      "required": ["schemaVersion", "createdDate", "recordId"]
+    },
+    "disbursementId": {
+      "type": "string",
+      "description": "Unique identifier for the disbursement"
+    },
+    "grantId": {
+      "type": "string",
+      "description": "Identifier of the grant being funded"
+    },
+    "grantNumber": {
+      "type": "string",
+      "description": "Official grant number from grantor"
+    },
+    "disbursementNumber": {
+      "type": "string",
+      "description": "Sequential disbursement number for this grant"
+    },
+    "disbursementDate": {
+      "type": "string",
+      "format": "date",
+      "description": "Date funds were disbursed"
+    },
+    "transactionDate": {
+      "type": "string",
+      "format": "date",
+      "description": "Date of financial transaction"
+    },
+    "amount": {
+      "type": "number",
+      "minimum": 0.01,
+      "description": "Amount disbursed"
+    },
+    "currency": {
+      "type": "string",
+      "description": "Currency of disbursement",
+      "default": "USD",
+      "pattern": "^[A-Z]{3}$"
+    },
+    "disbursementType": {
+      "type": "string",
+      "description": "Type of disbursement",
+      "enum": [
+        "advance_payment",
+        "reimbursement",
+        "working_capital_advance",
+        "letter_of_credit_drawdown",
+        "final_payment",
+        "closeout_payment",
+        "adjustment",
+        "refund"
+      ]
+    },
+    "paymentMethod": {
+      "type": "string",
+      "description": "Method of payment",
+      "enum": [
+        "ach",
+        "wire_transfer",
+        "check",
+        "credit_card",
+        "treasury_check",
+        "electronic_funds_transfer"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "description": "Current status of disbursement",
+      "enum": [
+        "requested",
+        "approved",
+        "processed",
+        "transmitted",
+        "completed",
+        "rejected",
+        "cancelled",
+        "reconciled",
+        "adjusted"
+      ]
+    },
+    "statusHistory": {
+      "type": "array",
+      "description": "History of status changes",
+      "items": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string"
+          },
+          "date": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "changedBy": {
+            "type": "string"
+          },
+          "notes": {
+            "type": "string"
+          }
+        },
+        "required": ["status", "date"]
+      }
+    },
+    "requestDetails": {
+      "type": "object",
+      "description": "Details of the disbursement request",
+      "properties": {
+        "requestDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "requestedBy": {
+          "type": "string"
+        },
+        "purpose": {
+          "type": "string",
+          "description": "Purpose of disbursement request"
+        },
+        "supportingDocumentation": {
+          "type": "array",
+          "description": "Documents supporting the request",
+          "items": {
+            "type": "object",
+            "properties": {
+              "documentId": {
+                "type": "string"
+              },
+              "documentType": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              }
+            },
+            "required": ["documentId", "documentType"]
+          }
+        },
+        "approvedBy": {
+          "type": "string"
+        },
+        "approvalDate": {
+          "type": "string",
+          "format": "date"
+        }
+      }
+    },
+    "financialDetails": {
+      "type": "object",
+      "description": "Financial transaction details",
+      "properties": {
+        "bankAccount": {
+          "type": "object",
+          "description": "Bank account information",
+          "properties": {
+            "accountName": {
+              "type": "string"
+            },
+            "accountNumber": {
+              "type": "string",
+              "description": "Masked account number"
+            },
+            "routingNumber": {
+              "type": "string"
+            },
+            "bankName": {
+              "type": "string"
+            },
+            "accountType": {
+              "type": "string",
+              "enum": ["checking", "savings", "money_market"]
+            }
+          }
+        },
+        "transactionReference": {
+          "type": "string",
+          "description": "Bank or payment system reference number"
+        },
+        "achTraceNumber": {
+          "type": "string",
+          "description": "ACH trace number for electronic transfers"
+        },
+        "checkNumber": {
+          "type": "string",
+          "description": "Check number if payment by check"
+        },
+        "feeAmount": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Transaction fees deducted"
+        },
+        "netAmount": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Amount received after fees"
+        }
+      }
+    },
+    "allocation": {
+      "type": "object",
+      "description": "Allocation of disbursement to budget categories",
+      "properties": {
+        "totalDisbursedToDate": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Cumulative amount disbursed for this grant"
+        },
+        "remainingBalance": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Remaining grant funds after this disbursement"
+        },
+        "percentOfAwardDisbursed": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "Percentage of total award disbursed"
+        },
+        "categoryAllocations": {
+          "type": "array",
+          "description": "Breakdown by budget category",
+          "items": {
+            "type": "object",
+            "properties": {
+              "category": {
+                "type": "string",
+                "enum": [
+                  "personnel",
+                  "fringe_benefits",
+                  "travel",
+                  "equipment",
+                  "supplies",
+                  "contractual",
+                  "construction",
+                  "other_direct",
+                  "indirect_costs"
+                ]
+              },
+              "amount": {
+                "type": "number",
+                "minimum": 0
+              },
+              "cumulativeAmount": {
+                "type": "number",
+                "minimum": 0
+              },
+              "remainingCategoryBalance": {
+                "type": "number"
+              }
+            },
+            "required": ["category", "amount"]
+          }
+        }
+      }
+    },
+    "complianceDetails": {
+      "type": "object",
+      "description": "Compliance verification details",
+      "properties": {
+        "allowabilityVerification": {
+          "type": "object",
+          "description": "Verification of cost allowability",
+          "properties": {
+            "verifiedBy": {
+              "type": "string"
+            },
+            "verificationDate": {
+              "type": "string",
+              "format": "date"
+            },
+            "verificationMethod": {
+              "type": "string",
+              "enum": ["sampling", "full_review", "system_generated"]
+            },
+            "allowableCosts": {
+              "type": "boolean"
+            },
+            "notes": {
+              "type": "string"
+            }
+          }
+        },
+        "timeAndEffortCertification": {
+          "type": "object",
+          "description": "Time and effort certification status",
+          "properties": {
+            "periodCovered": {
+              "$ref": "#/$defs/dateRange"
+            },
+            "certificationComplete": {
+              "type": "boolean"
+            },
+            "certificationDate": {
+              "type": "string",
+              "format": "date"
+            }
+          }
+        },
+        "matchVerification": {
+          "type": "object",
+          "description": "Matching fund verification",
+          "properties": {
+            "matchRequirementMet": {
+              "type": "boolean"
+            },
+            "matchAmountThisPeriod": {
+              "type": "number",
+              "minimum": 0
+            },
+            "cumulativeMatchAmount": {
+              "type": "number",
+              "minimum": 0
+            },
+            "matchSource": {
+              "type": "string"
+            }
+          }
+        },
+        "specialConditionCompliance": {
+          "type": "array",
+          "description": "Compliance with special conditions",
+          "items": {
+            "type": "object",
+            "properties": {
+              "conditionId": {
+                "type": "string"
+              },
+              "conditionMet": {
+                "type": "boolean"
+              },
+              "verificationDate": {
+                "type": "string",
+                "format": "date"
+              }
+            },
+            "required": ["conditionId", "conditionMet"]
+          }
+        }
+      }
+    },
+    "reconciliation": {
+      "type": "object",
+      "description": "Reconciliation information",
+      "properties": {
+        "reconciledDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "reconciledBy": {
+          "type": "string"
+        },
+        "bankStatementMatch": {
+          "type": "boolean"
+        },
+        "generalLedgerMatch": {
+          "type": "boolean"
+        },
+        "varianceAmount": {
+          "type": "number",
+          "description": "Difference between expected and actual"
+        },
+        "varianceExplanation": {
+          "type": "string"
+        },
+        "correctiveAction": {
+          "type": "string"
+        }
+      }
+    },
+    "relatedDisbursements": {
+      "type": "array",
+      "description": "Related disbursement records",
+      "items": {
+        "type": "object",
+        "properties": {
+          "disbursementId": {
+            "type": "string"
+          },
+          "relationshipType": {
+            "type": "string",
+            "enum": ["adjustment", "correction", "reversal", "supplemental"]
+          },
+          "relatedAmount": {
+            "type": "number"
+          }
+        },
+        "required": ["disbursementId", "relationshipType"]
+      }
+    },
+    "auditInformation": {
+      "type": "object",
+      "description": "Audit trail information",
+      "properties": {
+        "createdBy": {
+          "type": "string"
+        },
+        "modifiedBy": {
+          "type": "string"
+        },
+        "approvalChain": {
+          "type": "array",
+          "description": "Approval chain for this disbursement",
+          "items": {
+            "type": "object",
+            "properties": {
+              "approver": {
+                "type": "string"
+              },
+              "role": {
+                "type": "string"
+              },
+              "approvalDate": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "approvalMethod": {
+                "type": "string",
+                "enum": ["electronic", "manual", "system"]
+              }
+            },
+            "required": ["approver", "approvalDate"]
+          }
+        },
+        "systemLog": {
+          "type": "array",
+          "description": "System activity log",
+          "items": {
+            "type": "object",
+            "properties": {
+              "action": {
+                "type": "string"
+              },
+              "timestamp": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "user": {
+                "type": "string"
+              },
+              "details": {
+                "type": "string"
+              }
+            },
+            "required": ["action", "timestamp"]
+          }
+        }
+      }
+    },
+    "attachments": {
+      "type": "array",
+      "description": "Documents attached to this disbursement",
+      "items": {
+        "type": "object",
+        "properties": {
+          "documentId": {
+            "type": "string"
+          },
+          "documentType": {
+            "type": "string",
+            "enum": [
+              "request_form",
+              "invoice",
+              "receipt",
+              "bank_statement",
+              "approval",
+              "reconciliation",
+              "adjustment_document"
+            ]
+          },
+          "fileName": {
+            "type": "string"
+          },
+          "fileType": {
+            "type": "string"
+          },
+          "uploadDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "description": {
+            "type": "string"
+          }
+        },
+        "required": ["documentId", "documentType", "fileName", "uploadDate"]
+      }
+    },
+    "notes": {
+      "type": "string",
+      "description": "Additional notes or comments"
+    }
+  },
+  "$defs": {
+    "dateRange": {
+      "type": "object",
+      "properties": {
+        "startDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "endDate": {
+          "type": "string",
+          "format": "date"
+        }
+      },
+      "required": ["startDate", "endDate"]
+    }
+  },
+  "examples": [
+    {
+      "metadata": {
+        "schemaVersion": "1.2.0",
+        "createdDate": "2024-01-20T14:30:00Z",
+        "lastModifiedDate": "2024-01-21T09:15:00Z",
+        "sourceSystem": "GrantReady Disbursement Module v2.1",
+        "recordId": "disb-2024-001"
+      },
+      "disbursementId": "DISB2024001",
+      "grantId": "GR2024001",
+      "grantNumber": "HHS-2024-ABC-12345",
+      "disbursementNumber": "001",
+      "disbursementDate": "2024-02-15",
+      "transactionDate": "2024-02-14",
+      "amount": 50000,
+      "currency": "USD",
+      "disbursementType": "advance_payment",
+      "paymentMethod": "ach",
+      "status": "completed",
+      "statusHistory": [
+        {
+          "status": "requested",
+          "date": "2024-02-10T10:00:00Z",
+          "changedBy": "jdoe",
+          "notes": "Initial request submitted"
+        },
+        {
+          "status": "approved",
+          "date": "2024-02-12T14:30:00Z",
+          "changedBy": "asmith",
+          "notes": "Approved by program director"
+        }
+      ],
+      "requestDetails": {
+        "requestDate": "2024-02-10",
+        "requestedBy": "John Doe",
+        "purpose": "Q1 program startup costs and personnel",
+        "approvedBy": "Alice Smith",
+        "approvalDate": "2024-02-12"
+      },
+      "financialDetails": {
+        "bankAccount": {
+          "accountName": "Community Health Nonprofit Inc.",
+          "accountNumber": "******1234",
+          "routingNumber": "021000021",
+          "bankName": "National Bank",
+          "accountType": "checking"
+        },
+        "transactionReference": "ACH20240215123456",
+        "achTraceNumber": "123456789012345",
+        "netAmount": 50000
+      },
+      "allocation": {
+        "totalDisbursedToDate": 50000,
+        "remainingBalance": 200000,
+        "percentOfAwardDisbursed": 20,
+        "categoryAllocations": [
+          {
+            "category": "personnel",
+            "amount": 37500,
+            "cumulativeAmount": 37500,
+            "remainingCategoryBalance": 112500
+          },
+          {
+            "category": "supplies",
+            "amount": 12500,
+            "cumulativeAmount": 12500,
+            "remainingCategoryBalance": 12500
+          }
+        ]
+      },
+      "complianceDetails": {
+        "allowabilityVerification": {
+          "verifiedBy": "System",
+          "verificationDate": "2024-02-13",
+          "verificationMethod": "system_generated",
+          "allowableCosts": true,
+          "notes": "Costs within approved budget categories"
+        }
+      },
+      "auditInformation": {
+        "createdBy": "jdoe",
+        "modifiedBy": "asmith",
+        "approvalChain": [
+          {
+            "approver": "Alice Smith",
+            "role": "Program Director",
+            "approvalDate": "2024-02-12T14:30:00Z",
+            "approvalMethod": "electronic"
+          }
+        ]
+      }
+    }
+  ]
+}
