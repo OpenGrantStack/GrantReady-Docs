@@ -1,4 +1,12 @@
-README.md
+```
+l-Products
+Open Collective: https://opencollective.com/opengrantstack
+███████████████████████████████████████████████████████████
+```
+
+
+
+# README.md
 
 ```markdown
 # GrantReady Documentation Repository
